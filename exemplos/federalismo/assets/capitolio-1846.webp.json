@@ -1,0 +1,26 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "Capitol of the United States, Washington",
+  "autor": "",
+  "data": "1846-01-01",
+  "url_pagina": "https://www.loc.gov/item/2013646770/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/pnp/pga/05600/05606u.tif",
+  "direitos": "No known restrictions on publication.",
+  "licenca": "sem restrições conhecidas",
+  "credito_sugerido": "Capitol of the United States, Washington. Library of Congress.",
+  "arquivo_local": "loc_2013646770.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.035,0.05,0.965,0.80",
+    "redução para lado maior 2400px",
+    "salvo como webp q84, 2400x1344px"
+  ],
+  "origem_local": "loc_2013646770.jpg",
+  "largura": 2400,
+  "altura": 1344,
+  "texto_na_imagem": {
+    "md5": "b09a80dfaadc",
+    "metodo": "heuristica",
+    "indice_figura": 0.001
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "Brazil. Rio de Janeiro, Botafogo Bay",
+  "autor": "",
+  "data": "1909-01-01",
+  "url_pagina": "https://www.loc.gov/item/2016821943/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/pnp/npcc/20400/20412u.tif",
+  "direitos": "No known restrictions on publication. For more information, see National Photo Company Collection - Rights and Restrictions Information https://www.loc.gov/rr/print/res/275_npco.html",
+  "licenca": "sem restrições conhecidas",
+  "credito_sugerido": "Brazil. Rio de Janeiro, Botafogo Bay. Library of Congress.",
+  "arquivo_local": "loc_2016821943.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.09,0.10,0.92,0.86",
+    "redução para lado maior 2400px",
+    "salvo como webp q84, 2400x1601px"
+  ],
+  "origem_local": "loc_2016821943.jpg",
+  "largura": 2400,
+  "altura": 1601,
+  "texto_na_imagem": {
+    "md5": "f235cf13cd3c",
+    "metodo": "heuristica",
+    "indice_figura": 0.015
+  }
+}

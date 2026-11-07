@@ -1,0 +1,28 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "Sugar Loaf.",
+  "autor": "Castro y Ordóñez, Rafael, 1834-1865 Photographer.",
+  "data": "1862-01-01",
+  "url_pagina": "https://www.loc.gov/item/2021669495/",
+  "url_arquivo": "https://tile.loc.gov/image-services/iiif/service:gdc:gdcwdl:wd:l_:01:61:1:wdl_01611:icon1018518/full/pct:100/0/default.jpg",
+  "direitos": "(não informado)",
+  "licenca": "domínio público. Imagem publicada em 1862, sem restrição registrada no item.",
+  "credito_sugerido": "Sugar Loaf.. Library of Congress.",
+  "arquivo_local": "loc_2021669495.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.10,0.20,0.76,0.80",
+    "redução para lado maior 2600px",
+    "salvo como webp q84, 2600x1539px"
+  ],
+  "origem_local": "loc_2021669495.jpg",
+  "largura": 2600,
+  "altura": 1539,
+  "licenca_original_do_script": "VERIFICAR (leia 'direitos')",
+  "decisao_direitos": "Conferido na página do item e pela data de publicação, em 2026-10-21.",
+  "texto_na_imagem": {
+    "md5": "1de65c0b9331",
+    "metodo": "heuristica",
+    "indice_figura": 0.0
+  }
+}

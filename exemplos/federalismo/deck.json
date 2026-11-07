@@ -1,0 +1,438 @@
+{
+  "titulo": "Federalismo",
+  "slug": "federalismo",
+  "idioma": "pt-BR",
+  "tema": "editorial",
+  "modo_texto": "autoral",
+  "autor": "Demonstração da skill slides-impecaveis",
+  "instituicao": "Ciência Política",
+  "data": "2026",
+  "contrato": {
+    "tese": "Federalismo é uma divisão de poder que precisa ser defendida o tempo todo; o deck mostra a mesma pergunta atravessando Filadélfia (1787), a República brasileira (1889) e a Constituição de 1988.",
+    "mundo": "Revista de história impressa: papel creme, grafite e bordô, títulos condensados em caixa alta, gravuras e fotografias de acervo em tamanho grande, legenda de museu em cada imagem.",
+    "historia": "A turma parte de uma pergunta sobre quem decide, aprende a definição, vê o desenho americano, vê o caminho brasileiro, compara os dois e sai com três ideias e as referências.",
+    "primeira_tela": "Campo grafite à esquerda com FEDERALISMO em letras enormes e o subtítulo; à direita, sangrando até a borda, a gravura do Capitólio de 1846 com legenda de acervo.",
+    "forma": "Editorial escolhido entre cinco temas porque as fontes visuais são gravuras e fotografias históricas e a sala é clara.",
+    "publico": "Graduação em Ciência Política, turma de 40 a 60 pessoas.",
+    "sala": "Sala de aula clara, projetor de 3 metros, última fila a cerca de 12 metros.",
+    "duracao_min": 30,
+    "acabamento": "Texto conferido. Fontes e ocupação medidas em todos os slides. Imagens de acervo com proveniência. PDF e PPTX gerados depois da aprovação do avaliador."
+  },
+  "secoes": [
+    {
+      "nome": "O conceito",
+      "inicio": 1
+    },
+    {
+      "nome": "Estados Unidos",
+      "inicio": 5
+    },
+    {
+      "nome": "Brasil",
+      "inicio": 9
+    },
+    {
+      "nome": "Síntese",
+      "inicio": 18
+    }
+  ],
+  "imagens": {
+    "capitolio-1846": {
+      "arquivo": "assets/capitolio-1846.webp",
+      "foco": "72% 62%",
+      "legenda": "<i>Capitol of the United States</i>, Washington, gravura, 1846 · Library of Congress",
+      "credito": "<i>Capitol of the United States, Washington</i>, gravura, 1846. Library of Congress, Prints and Photographs Division. Sem restrições conhecidas de publicação.",
+      "alt": "Gravura do Capitólio dos Estados Unidos em 1846, com a cúpula antiga e árvores à frente."
+    },
+    "plano-washington-1792": {
+      "arquivo": "assets/plano-washington-1792.webp",
+      "foco": "48% 50%",
+      "legenda": "<i>Plan of the City of Washington</i>, 1792 · Library of Congress",
+      "credito": "<i>Plan of the city of Washington</i>, 1792. Library of Congress, Geography and Map Division. Obra de 1792, domínio público.",
+      "alt": "Plano impresso de 1792 da cidade de Washington, com o rio Potomac e a malha de ruas.",
+      "documento": true
+    },
+    "federalist-1788": {
+      "arquivo": "assets/federalist-1788.webp",
+      "foco": "50% 12%",
+      "legenda": "<i>The Federalist</i>, vol. I, Nova York, 1788 · Library of Congress",
+      "credito": "<i>The Federalist: a collection of essays, written in favour of the new Constitution</i>, vol. I. Nova York, J. and A. McLean, 1788. Library of Congress, Rare Book and Special Collections Division. Obra de 1788, domínio público.",
+      "alt": "Folha de rosto da primeira edição em livro de O Federalista, de 1788.",
+      "documento": true
+    },
+    "capitolio-1875": {
+      "arquivo": "assets/capitolio-1875.webp",
+      "foco": "40% 40%",
+      "legenda": "Capitólio dos Estados Unidos, c. 1875 · Library of Congress",
+      "credito": "<i>United States Capitol</i>, fotografia, c. 1875. Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Fotografia em preto e branco da fachada e da cúpula do Capitólio por volta de 1875."
+    },
+    "avenida-central-1913": {
+      "arquivo": "assets/avenida-central-1913.webp",
+      "foco": "50% 55%",
+      "legenda": "Avenida Central, Rio de Janeiro, então capital federal, 1913 · Library of Congress",
+      "credito": "<i>Central Ave., \"the $11,000,000 boulevard\", north to bay, Rio de Janeiro</i>, estereografia, 1913. Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Vista do alto da Avenida Central do Rio de Janeiro em 1913, com prédios e bondes."
+    },
+    "botafogo-1909": {
+      "arquivo": "assets/botafogo-1909.webp",
+      "foco": "50% 45%",
+      "legenda": "Enseada de Botafogo, Rio de Janeiro, 1909 · Library of Congress",
+      "credito": "<i>Brazil. Rio de Janeiro, Botafogo Bay</i>, 1909. National Photo Company Collection, Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Fotografia de 1909 da enseada de Botafogo com o Corcovado ao fundo."
+    },
+    "pao-de-acucar-1862": {
+      "arquivo": "assets/pao-de-acucar-1862.webp",
+      "foco": "60% 45%",
+      "legenda": "Pão de Açúcar e o Rio de Janeiro, fotografia de 1862 · Library of Congress",
+      "credito": "<i>Sugar Loaf</i>, fotografia, 1862. Library of Congress. Obra de 1862, domínio público.",
+      "alt": "Fotografia sépia de 1862 com casas do Rio de Janeiro e o Pão de Açúcar ao fundo."
+    },
+    "brasilia-satelite": {
+      "arquivo": "assets/brasilia-satelite.webp",
+      "foco": "55% 45%",
+      "legenda": "Brasília vista do espaço, 2010 · NASA/JPL",
+      "credito": "<i>Brasilia, Brazil</i> (PIA13045), NASA/JPL, 2010. Imagem da NASA, domínio público.",
+      "alt": "Imagem de satélite de Brasília com o lago Paranoá em azul e o desenho do Plano Piloto."
+    },
+    "rio-orbita-1994": {
+      "arquivo": "assets/rio-orbita-1994.webp",
+      "foco": "50% 60%",
+      "legenda": "Rio de Janeiro visto do ônibus espacial Columbia, 1994 · NASA",
+      "credito": "<i>STS-65 Earth observation of Rio de Janeiro</i>, NASA, 1994. Imagem da NASA, domínio público.",
+      "alt": "Fotografia orbital da baía de Guanabara e da região metropolitana do Rio de Janeiro."
+    },
+    "luzes-brasil-2025": {
+      "arquivo": "assets/luzes-brasil-2025.webp",
+      "foco": "60% 50%",
+      "legenda": "Luzes de cidades brasileiras vistas da Estação Espacial, 2025 · NASA",
+      "credito": "<i>City lights dot the Brazilian landscape</i> (iss073e0855854), NASA, 2025. Imagem da NASA, domínio público.",
+      "alt": "Fotografia noturna tirada da Estação Espacial Internacional com pontos de luz de cidades no Brasil."
+    },
+    "madison-1830": {
+      "arquivo": "assets/madison-1830.webp",
+      "foco": "50% 40%",
+      "legenda": "<i>James Madison</i>, litografia de A. Newsam, c. 1830 · Library of Congress",
+      "credito": "<i>James Madison</i>, litografia de A. Newsam, impressa por P. S. Duval, Filadélfia, c. 1830. Library of Congress, Prints and Photographs Division. Sem restrições conhecidas de publicação.",
+      "alt": "Retrato litográfico de James Madison em busto, de cabelos brancos, casaca escura e lenço de renda no pescoço."
+    }
+  },
+  "slides": [
+    {
+      "layout": "capa",
+      "titulo": "Federalismo",
+      "subtitulo": "Dividir o poder sem partir o país",
+      "imagem": "capitolio-1846",
+      "notas": "Abertura, 1 min. Apresente a pergunta que guia a aula, sobre quem decide o quê quando um país tem mais de um nível de governo."
+    },
+    {
+      "layout": "pergunta",
+      "titulo": "Quem deve decidir, o país inteiro ou cada parte dele?",
+      "texto": "A pergunta atravessa 1787, 1891 e 1988, e continua aberta.",
+      "imagem": "luzes-brasil-2025",
+      "notas": "2 min. Peça exemplos atuais, como vacinação, segurança pública e educação básica. Anote no quadro quem decidiu em cada caso."
+    },
+    {
+      "layout": "dividido",
+      "titulo": "O que define uma federação",
+      "imagem": "federalist-1788",
+      "lado": "direita",
+      "itens": [
+        "Dois níveis de governo agem sobre o mesmo território e a mesma população",
+        "Cada nível tem competências próprias garantidas pela Constituição",
+        "Nenhum dos dois pode extinguir o outro por decisão própria (Riker, 1964)"
+      ],
+      "destaques": {
+        "1": [
+          "garantidas pela Constituição"
+        ]
+      },
+      "fonte": "Definição baseada em Riker (1964).",
+      "notas": "2 min. A definição de Riker tem três partes. Dois níveis, autonomia em pelo menos uma área e garantia dessa autonomia. A folha de rosto é a primeira edição em livro de O Federalista."
+    },
+    {
+      "layout": "tabela",
+      "titulo": "Três maneiras de organizar o território",
+      "tabela": {
+        "cabecalho": [
+          "",
+          "Estado unitário",
+          "Federação",
+          "Confederação"
+        ],
+        "linhas": [
+          [
+            "Soberania",
+            "Só no centro",
+            "Dividida pela Constituição",
+            "Nos membros"
+          ],
+          [
+            "Unidades",
+            "Delegadas pelo centro",
+            "Autônomas",
+            "Soberanas"
+          ],
+          [
+            "Saída de membro",
+            "Não se aplica",
+            "Não prevista",
+            "Possível"
+          ],
+          [
+            "Exemplo",
+            "França",
+            "Brasil, EUA",
+            "EUA, 1781 a 1789"
+          ]
+        ]
+      },
+      "notas": "2 min. A confederação americana dos Artigos (1781 a 1789) é o contraexemplo que levou à Convenção de Filadélfia."
+    },
+    {
+      "layout": "secao",
+      "titulo": "Estados Unidos, 1787",
+      "texto": "Treze ex-colônias trocaram uma liga frágil por uma União com governo próprio.",
+      "imagem": "plano-washington-1792",
+      "notas": "Transição, 30 s. O plano de Washington, de 1792, mostra a capital desenhada para a nova União."
+    },
+    {
+      "layout": "linha-do-tempo",
+      "titulo": "Da liga à União",
+      "eventos": [
+        {
+          "ano": "1781",
+          "texto": "Artigos da Confederação em vigor"
+        },
+        {
+          "ano": "1787",
+          "texto": "Convenção de Filadélfia redige a Constituição"
+        },
+        {
+          "ano": "1788",
+          "texto": "O Federalista sai em livro, com 85 ensaios"
+        },
+        {
+          "ano": "1789",
+          "texto": "A Constituição entra em vigor"
+        },
+        {
+          "ano": "1791",
+          "texto": "10ª Emenda reserva poderes aos estados"
+        }
+      ],
+      "notas": "3 min. A 10ª Emenda (1791) diz que os poderes não delegados à União ficam com os estados ou com o povo.",
+      "imagem": "federalist-1788",
+      "foco_imagem": "50% 4%"
+    },
+    {
+      "layout": "citacao",
+      "imagem": "madison-1830",
+      "citacao": {
+        "texto": "Se os homens fossem anjos, nenhum governo seria necessário. Se anjos governassem os homens, nenhum controle externo ou interno sobre o governo seria necessário.",
+        "autor": "James Madison",
+        "obra": "O Federalista, nº 51, 1788 (tradução livre)"
+      },
+      "notas": "2 min. A frase seguinte do ensaio explica o problema. É preciso um governo capaz de controlar os governados e obrigado a controlar a si mesmo."
+    },
+    {
+      "layout": "diagrama",
+      "titulo": "A dupla segurança de Madison",
+      "itens": [
+        "O poder do povo é dividido entre dois governos",
+        "Cada governo divide seu poder entre três ramos",
+        "Um controla o outro, e cada um controla a si mesmo"
+      ],
+      "diagrama": {
+        "tipo": "cadeia",
+        "nos": [
+          "Povo",
+          "União e estados",
+          "Três poderes em cada um"
+        ],
+        "destaque": [
+          0
+        ]
+      },
+      "fonte": "Madison, O Federalista nº 51 (1788).",
+      "notas": "3 min. No nº 51 Madison chama a combinação de divisão federal e separação de poderes de dupla segurança para os direitos do povo."
+    },
+    {
+      "layout": "secao",
+      "titulo": "Brasil, 1889",
+      "texto": "Aqui a federação nasceu de um Estado unitário que se dividiu.",
+      "imagem": "pao-de-acucar-1862",
+      "notas": "Transição, 30 s. O Império era unitário, e as províncias tinham presidentes nomeados pelo governo central."
+    },
+    {
+      "layout": "linha-do-tempo",
+      "titulo": "Um século de idas e vindas",
+      "imagem": "avenida-central-1913",
+      "eventos": [
+        {
+          "ano": "1889",
+          "texto": "A República transforma províncias em estados"
+        },
+        {
+          "ano": "1891",
+          "texto": "A primeira Constituição republicana adota a federação"
+        },
+        {
+          "ano": "1937",
+          "texto": "O Estado Novo nomeia interventores nos estados"
+        },
+        {
+          "ano": "1946",
+          "texto": "A nova Constituição devolve autonomia aos estados"
+        },
+        {
+          "ano": "1988",
+          "texto": "Municípios passam a integrar a federação"
+        }
+      ],
+      "notas": "3 min. O Decreto nº 1, de 15 de novembro de 1889, já falava em Estados Unidos do Brasil. A centralização de 1937 mostra que a federação pode ser suspensa."
+    },
+    {
+      "layout": "comparacao",
+      "titulo": "Dois caminhos até a federação",
+      "colunas": [
+        {
+          "titulo": "Juntar (Estados Unidos)",
+          "imagem": "capitolio-1875",
+          "itens": [
+            "Estados já existentes cedem poder a um centro",
+            "A União nasce do pacto entre as partes"
+          ]
+        },
+        {
+          "titulo": "Manter junto (Brasil)",
+          "imagem": "botafogo-1909",
+          "itens": [
+            "Um Estado unitário divide poder com as províncias",
+            "A federação responde a pressões regionais"
+          ]
+        }
+      ],
+      "notas": "3 min. A distinção entre juntar e manter junto vem de Stepan (1999). Aplicá-la ao Brasil de 1889 é uma interpretação desta aula. Discuta os limites."
+    },
+    {
+      "layout": "numero",
+      "titulo": "Municípios também são federação",
+      "numero": {
+        "valor": "5.570",
+        "texto": "Desde 1988 eles têm autonomia política, administrativa e financeira."
+      },
+      "imagem": "rio-orbita-1994",
+      "fonte": "IBGE (5.568 municípios, o Distrito Federal e o distrito estadual de Fernando de Noronha). Constituição Federal, art. 18.",
+      "notas": "2 min. Poucas federações dão aos municípios o status de ente federado. Isso multiplica os pontos de decisão e de coordenação."
+    },
+    {
+      "layout": "grafico",
+      "titulo": "Quantas unidades formam cada federação",
+      "texto": "O Brasil tem 26 estados e o Distrito Federal. O número de unidades não mede o grau de autonomia.",
+      "grafico": {
+        "tipo": "barras-h",
+        "rotulos": [
+          "Estados Unidos",
+          "México",
+          "Índia",
+          "Brasil",
+          "Argentina",
+          "Alemanha",
+          "Canadá",
+          "Austrália"
+        ],
+        "valores": [
+          50,
+          31,
+          28,
+          26,
+          23,
+          16,
+          10,
+          6
+        ],
+        "destaque": [
+          3
+        ]
+      },
+      "fonte": "Fonte: constituições nacionais e órgãos oficiais (2025). Só unidades de primeiro nível; territórios e distritos federais ficam de fora.",
+      "notas": "2 min. Chame atenção para o que o gráfico não mostra, como competências, receitas e peso no Senado."
+    },
+    {
+      "layout": "galeria",
+      "titulo": "Onde a União mora",
+      "imagens": [
+        "plano-washington-1792",
+        "pao-de-acucar-1862",
+        "brasilia-satelite"
+      ],
+      "notas": "2 min. Washington foi desenhada para a nova União. O Rio foi capital até 1960. Brasília levou a capital para o centro do território.",
+      "legendas": true
+    },
+    {
+      "layout": "cartoes",
+      "titulo": "Como a federação coordena políticas",
+      "cartoes": [
+        {
+          "titulo": "Receitas partilhadas",
+          "texto": "FPE e FPM repassam parte dos impostos federais"
+        },
+        {
+          "titulo": "Gastos vinculados",
+          "texto": "Mínimos constitucionais em saúde e educação"
+        },
+        {
+          "titulo": "Pactos no SUS",
+          "texto": "Comissões dos três níveis decidem juntas"
+        },
+        {
+          "titulo": "Consórcios",
+          "texto": "Municípios vizinhos se associam (Lei 11.107, 2005)"
+        }
+      ],
+      "notas": "3 min. Arretche (2012) mostra que a União concentra a regulação e os estados e municípios executam boa parte das políticas."
+    },
+    {
+      "layout": "imagem-total",
+      "titulo": "Brasília, 1960",
+      "imagem": "brasilia-satelite",
+      "lado": "esquerda",
+      "itens": [
+        "A Constituição de 1891 já reservava área no Planalto Central para a capital",
+        "A cidade foi inaugurada em 21 de abril de 1960"
+      ],
+      "notas": "1 min. A mudança da capital é também um projeto de integração do território."
+    },
+    {
+      "layout": "afirmacao",
+      "titulo": "Federalismo é uma disputa permanente sobre quem decide o quê",
+      "imagem": "botafogo-1909",
+      "notas": "1 min. Esta é a tese da aula. Pergunte se a turma concorda."
+    },
+    {
+      "layout": "fechamento",
+      "titulo": "Para guardar",
+      "imagem": "capitolio-1846",
+      "itens": [
+        "Federação é divisão de poder garantida pela Constituição",
+        "EUA juntaram partes, e o Brasil manteve junto um Estado unitário",
+        "Desde 1988, União, estados e municípios disputam e coordenam"
+      ],
+      "notas": "2 min. Retome a pergunta do início e a votação da turma."
+    },
+    {
+      "layout": "referencias",
+      "titulo": "Referências",
+      "referencias": [
+        "ABRUCIO, F. L. *Os barões da federação*. São Paulo: Hucitec, 1998.",
+        "ARRETCHE, M. *Democracia, federalismo e centralização no Brasil*. Rio de Janeiro: FGV/Fiocruz, 2012.",
+        "BRASIL. *Constituição da República Federativa do Brasil*. Brasília, 1988.",
+        "HAMILTON, A.; MADISON, J.; JAY, J. *The Federalist*. Nova York: J. and A. McLean, 1788.",
+        "RIKER, W. *Federalism: origin, operation, significance*. Boston: Little, Brown, 1964.",
+        "STEPAN, A. Federalism and democracy: beyond the U.S. model. *Journal of Democracy*, v. 10, n. 4, 1999."
+      ],
+      "notas": "Deixe o slide durante as perguntas."
+    }
+  ]
+}

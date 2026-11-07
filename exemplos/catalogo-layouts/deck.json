@@ -1,0 +1,943 @@
+{
+  "titulo": "Federalismo em vinte layouts",
+  "slug": "catalogo-layouts",
+  "idioma": "pt-BR",
+  "tema": "tabuleiro",
+  "modo_texto": "autoral",
+  "autor": "Demonstração da skill slides-impecaveis",
+  "instituicao": "Ciência Política",
+  "data": "2026",
+  "contrato": {
+    "tese": "Mostrar cada layout da skill com conteúdo real sobre federalismo, no tema tabuleiro, para servir de referência visual.",
+    "mundo": "Revista de história impressa: papel creme, grafite e bordô, títulos condensados em caixa alta, gravuras e fotografias de acervo em tamanho grande, legenda de museu em cada imagem.",
+    "historia": "A turma parte de uma pergunta sobre quem decide, aprende a definição, vê o desenho americano, vê o caminho brasileiro, compara os dois e sai com três ideias e as referências.",
+    "primeira_tela": "Campo grafite à esquerda com FEDERALISMO em letras enormes e o subtítulo; à direita, sangrando até a borda, a gravura do Capitólio de 1846 com legenda de acervo.",
+    "forma": "Tabuleiro, para mostrar um segundo tema além do exemplo principal.",
+    "publico": "Graduação em Ciência Política, turma de 40 a 60 pessoas.",
+    "sala": "Sala de aula clara, projetor de 3 metros, última fila a cerca de 12 metros.",
+    "duracao_min": 30,
+    "acabamento": "Texto conferido. Fontes e ocupação medidas em todos os slides. Imagens de acervo com proveniência. PDF e PPTX gerados depois da aprovação do avaliador."
+  },
+  "imagens": {
+    "capitolio-1846": {
+      "arquivo": "../federalismo/assets/capitolio-1846.webp",
+      "foco": "72% 62%",
+      "legenda": "<i>Capitol of the United States</i>, Washington, gravura, 1846 · Library of Congress",
+      "credito": "<i>Capitol of the United States, Washington</i>, gravura, 1846. Library of Congress, Prints and Photographs Division. Sem restrições conhecidas de publicação.",
+      "alt": "Gravura do Capitólio dos Estados Unidos em 1846, com a cúpula antiga e árvores à frente."
+    },
+    "plano-washington-1792": {
+      "arquivo": "../federalismo/assets/plano-washington-1792.webp",
+      "foco": "48% 50%",
+      "legenda": "<i>Plan of the City of Washington</i>, 1792 · Library of Congress",
+      "credito": "<i>Plan of the city of Washington</i>, 1792. Library of Congress, Geography and Map Division. Obra de 1792, domínio público.",
+      "alt": "Plano impresso de 1792 da cidade de Washington, com o rio Potomac e a malha de ruas.",
+      "documento": true
+    },
+    "federalist-1788": {
+      "arquivo": "../federalismo/assets/federalist-1788.webp",
+      "foco": "50% 12%",
+      "legenda": "<i>The Federalist</i>, vol. I, Nova York, 1788 · Library of Congress",
+      "credito": "<i>The Federalist: a collection of essays, written in favour of the new Constitution</i>, vol. I. Nova York, J. and A. McLean, 1788. Library of Congress, Rare Book and Special Collections Division. Obra de 1788, domínio público.",
+      "alt": "Folha de rosto da primeira edição em livro de O Federalista, de 1788.",
+      "documento": true
+    },
+    "capitolio-1875": {
+      "arquivo": "../federalismo/assets/capitolio-1875.webp",
+      "foco": "40% 40%",
+      "legenda": "Capitólio dos Estados Unidos, c. 1875 · Library of Congress",
+      "credito": "<i>United States Capitol</i>, fotografia, c. 1875. Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Fotografia em preto e branco da fachada e da cúpula do Capitólio por volta de 1875."
+    },
+    "avenida-central-1913": {
+      "arquivo": "../federalismo/assets/avenida-central-1913.webp",
+      "foco": "50% 55%",
+      "legenda": "Avenida Central, Rio de Janeiro, então capital federal, 1913 · Library of Congress",
+      "credito": "<i>Central Ave., \"the $11,000,000 boulevard\", north to bay, Rio de Janeiro</i>, estereografia, 1913. Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Vista do alto da Avenida Central do Rio de Janeiro em 1913, com prédios e bondes."
+    },
+    "botafogo-1909": {
+      "arquivo": "../federalismo/assets/botafogo-1909.webp",
+      "foco": "50% 45%",
+      "legenda": "Enseada de Botafogo, Rio de Janeiro, 1909 · Library of Congress",
+      "credito": "<i>Brazil. Rio de Janeiro, Botafogo Bay</i>, 1909. National Photo Company Collection, Library of Congress. Sem restrições conhecidas de publicação.",
+      "alt": "Fotografia de 1909 da enseada de Botafogo com o Corcovado ao fundo."
+    },
+    "pao-de-acucar-1862": {
+      "arquivo": "../federalismo/assets/pao-de-acucar-1862.webp",
+      "foco": "60% 45%",
+      "legenda": "Pão de Açúcar e o Rio de Janeiro, fotografia de 1862 · Library of Congress",
+      "credito": "<i>Sugar Loaf</i>, fotografia, 1862. Library of Congress. Obra de 1862, domínio público.",
+      "alt": "Fotografia sépia de 1862 com casas do Rio de Janeiro e o Pão de Açúcar ao fundo."
+    },
+    "brasilia-satelite": {
+      "arquivo": "../federalismo/assets/brasilia-satelite.webp",
+      "foco": "55% 45%",
+      "legenda": "Brasília vista do espaço, 2010 · NASA/JPL",
+      "credito": "<i>Brasilia, Brazil</i> (PIA13045), NASA/JPL, 2010. Imagem da NASA, domínio público.",
+      "alt": "Imagem de satélite de Brasília com o lago Paranoá em azul e o desenho do Plano Piloto."
+    },
+    "rio-orbita-1994": {
+      "arquivo": "../federalismo/assets/rio-orbita-1994.webp",
+      "foco": "50% 60%",
+      "legenda": "Rio de Janeiro visto do ônibus espacial Columbia, 1994 · NASA",
+      "credito": "<i>STS-65 Earth observation of Rio de Janeiro</i>, NASA, 1994. Imagem da NASA, domínio público.",
+      "alt": "Fotografia orbital da baía de Guanabara e da região metropolitana do Rio de Janeiro."
+    },
+    "luzes-brasil-2025": {
+      "arquivo": "../federalismo/assets/luzes-brasil-2025.webp",
+      "foco": "60% 50%",
+      "legenda": "Luzes de cidades brasileiras vistas da Estação Espacial, 2025 · NASA",
+      "credito": "<i>City lights dot the Brazilian landscape</i> (iss073e0855854), NASA, 2025. Imagem da NASA, domínio público.",
+      "alt": "Fotografia noturna tirada da Estação Espacial Internacional com pontos de luz de cidades no Brasil."
+    },
+    "madison-1830": {
+      "arquivo": "../federalismo/assets/madison-1830.webp",
+      "foco": "50% 40%",
+      "legenda": "<i>James Madison</i>, litografia de A. Newsam, c. 1830 · Library of Congress",
+      "credito": "<i>James Madison</i>, litografia de A. Newsam, impressa por P. S. Duval, Filadélfia, c. 1830. Library of Congress, Prints and Photographs Division. Sem restrições conhecidas de publicação.",
+      "alt": "Retrato litográfico de James Madison em busto, de cabelos brancos, casaca escura e lenço de renda no pescoço."
+    }
+  },
+  "secoes": [
+    {
+      "nome": "Abertura",
+      "inicio": 1
+    },
+    {
+      "nome": "Layouts de imagem",
+      "inicio": 2
+    },
+    {
+      "nome": "Layouts de estrutura",
+      "inicio": 8
+    },
+    {
+      "nome": "Layouts de fechamento",
+      "inicio": 15
+    },
+    {
+      "nome": "Gráficos e números",
+      "inicio": 22
+    }
+  ],
+  "slides": [
+    {
+      "layout": "capa",
+      "titulo": "Federalismo em vinte layouts",
+      "subtitulo": "Catálogo visual da skill, com conteúdo e imagens reais",
+      "imagem": "capitolio-1846",
+      "notas": "Layout capa."
+    },
+    {
+      "layout": "secao",
+      "titulo": "Brasil, 1889",
+      "texto": "Aqui a federação nasceu de um Estado unitário que se dividiu.",
+      "imagem": "pao-de-acucar-1862",
+      "notas": "Layout secao. Abre um bloco com campo de cor, mapa das seções e imagem."
+    },
+    {
+      "layout": "imagem-total",
+      "titulo": "Brasília, 1960",
+      "imagem": "brasilia-satelite",
+      "lado": "esquerda",
+      "itens": [
+        "A Constituição de 1891 já reservava área no Planalto Central para a capital",
+        "A cidade foi inaugurada em 21 de abril de 1960"
+      ],
+      "notas": "Layout imagem-total. Imagem sangrando com painel sólido de texto."
+    },
+    {
+      "layout": "dividido",
+      "titulo": "O que define uma federação",
+      "imagem": "federalist-1788",
+      "lado": "direita",
+      "itens": [
+        "Dois níveis de governo agem sobre o mesmo território e a mesma população",
+        "Cada nível tem competências próprias garantidas pela Constituição",
+        "Nenhum dos dois pode extinguir o outro por decisão própria (Riker, 1964)"
+      ],
+      "destaques": {
+        "1": [
+          "garantidas pela Constituição"
+        ]
+      },
+      "fonte": "Definição baseada em Riker (1964).",
+      "notas": "Layout dividido. Texto e visual lado a lado. O lado pode ser direita ou esquerda."
+    },
+    {
+      "layout": "faixa",
+      "titulo": "O Federalista em 85 ensaios",
+      "imagem": "federalist-1788",
+      "foco_imagem": "50% 4%",
+      "itens": [
+        "Publicados em jornais de Nova York entre 1787 e 1788",
+        "Assinados com o pseudônimo Publius",
+        "Escritos por Hamilton, Madison e Jay"
+      ],
+      "notas": "Layout faixa. Imagem larga no topo, título e texto embaixo."
+    },
+    {
+      "layout": "numero",
+      "titulo": "Municípios também são federação",
+      "numero": {
+        "valor": "5.570",
+        "texto": "Desde 1988 eles têm autonomia política, administrativa e financeira."
+      },
+      "imagem": "rio-orbita-1994",
+      "fonte": "IBGE (5.568 municípios, o Distrito Federal e o distrito estadual de Fernando de Noronha). Constituição Federal, art. 18.",
+      "notas": "Layout numero. Um número real com fonte."
+    },
+    {
+      "layout": "citacao",
+      "imagem": "madison-1830",
+      "citacao": {
+        "texto": "Se os homens fossem anjos, nenhum governo seria necessário. Se anjos governassem os homens, nenhum controle externo ou interno sobre o governo seria necessário.",
+        "autor": "James Madison",
+        "obra": "O Federalista, nº 51, 1788 (tradução livre)"
+      },
+      "notas": "Layout citacao."
+    },
+    {
+      "layout": "comparacao",
+      "titulo": "Dois caminhos até a federação",
+      "colunas": [
+        {
+          "titulo": "Juntar (Estados Unidos)",
+          "imagem": "capitolio-1875",
+          "itens": [
+            "Estados já existentes cedem poder a um centro",
+            "A União nasce do pacto entre as partes"
+          ]
+        },
+        {
+          "titulo": "Manter junto (Brasil)",
+          "imagem": "botafogo-1909",
+          "itens": [
+            "Um Estado unitário divide poder com as províncias",
+            "A federação responde a pressões regionais"
+          ]
+        }
+      ],
+      "notas": "Layout comparacao."
+    },
+    {
+      "layout": "linha-do-tempo",
+      "titulo": "Um século de idas e vindas",
+      "imagem": "avenida-central-1913",
+      "eventos": [
+        {
+          "ano": "1889",
+          "texto": "A República transforma províncias em estados"
+        },
+        {
+          "ano": "1891",
+          "texto": "A primeira Constituição republicana adota a federação"
+        },
+        {
+          "ano": "1937",
+          "texto": "O Estado Novo nomeia interventores nos estados"
+        },
+        {
+          "ano": "1946",
+          "texto": "A nova Constituição devolve autonomia aos estados"
+        },
+        {
+          "ano": "1988",
+          "texto": "Municípios passam a integrar a federação"
+        }
+      ],
+      "notas": "Layout linha-do-tempo."
+    },
+    {
+      "layout": "processo",
+      "titulo": "Como se aprova uma emenda à Constituição de 1988",
+      "passos": [
+        {
+          "titulo": "Proposta",
+          "texto": "Um terço da Câmara ou do Senado, o presidente ou mais da metade das assembleias estaduais"
+        },
+        {
+          "titulo": "Dois turnos",
+          "texto": "A proposta é votada duas vezes em cada Casa do Congresso"
+        },
+        {
+          "titulo": "Três quintos",
+          "texto": "Em cada turno, precisa de três quintos dos votos"
+        },
+        {
+          "titulo": "Promulgação",
+          "texto": "As Mesas da Câmara e do Senado promulgam a emenda"
+        }
+      ],
+      "fonte": "Constituição Federal, art. 60.",
+      "notas": "Layout processo. Etapas em ordem; a numeração aqui carrega informação."
+    },
+    {
+      "layout": "galeria",
+      "titulo": "Onde a União mora",
+      "imagens": [
+        "plano-washington-1792",
+        "pao-de-acucar-1862",
+        "brasilia-satelite"
+      ],
+      "notas": "Layout galeria.",
+      "legendas": true
+    },
+    {
+      "layout": "cartoes",
+      "titulo": "Como a federação coordena políticas",
+      "cartoes": [
+        {
+          "titulo": "Receitas partilhadas",
+          "texto": "FPE e FPM repassam parte dos impostos federais"
+        },
+        {
+          "titulo": "Gastos vinculados",
+          "texto": "Mínimos constitucionais em saúde e educação"
+        },
+        {
+          "titulo": "Pactos no SUS",
+          "texto": "Comissões dos três níveis decidem juntas"
+        },
+        {
+          "titulo": "Consórcios",
+          "texto": "Municípios vizinhos se associam (Lei 11.107, 2005)"
+        }
+      ],
+      "notas": "Layout cartoes. Sem imagem, cada cartão ganha a arte do tema."
+    },
+    {
+      "layout": "grafico",
+      "titulo": "Quantas unidades formam cada federação",
+      "texto": "O Brasil tem 26 estados e o Distrito Federal. O número de unidades não mede o grau de autonomia.",
+      "grafico": {
+        "tipo": "barras-h",
+        "rotulos": [
+          "Estados Unidos",
+          "México",
+          "Índia",
+          "Brasil",
+          "Argentina",
+          "Alemanha",
+          "Canadá",
+          "Austrália"
+        ],
+        "valores": [
+          50,
+          31,
+          28,
+          26,
+          23,
+          16,
+          10,
+          6
+        ],
+        "destaque": [
+          3
+        ]
+      },
+      "fonte": "Fonte: constituições nacionais e órgãos oficiais (2025). Só unidades de primeiro nível; territórios e distritos federais ficam de fora.",
+      "notas": "Layout grafico.",
+      "etapas": true
+    },
+    {
+      "layout": "tabela",
+      "titulo": "Três maneiras de organizar o território",
+      "tabela": {
+        "cabecalho": [
+          "",
+          "Estado unitário",
+          "Federação",
+          "Confederação"
+        ],
+        "linhas": [
+          [
+            "Soberania",
+            "Só no centro",
+            "Dividida pela Constituição",
+            "Nos membros"
+          ],
+          [
+            "Unidades",
+            "Delegadas pelo centro",
+            "Autônomas",
+            "Soberanas"
+          ],
+          [
+            "Saída de membro",
+            "Não se aplica",
+            "Não prevista",
+            "Possível"
+          ],
+          [
+            "Exemplo",
+            "França",
+            "Brasil, EUA",
+            "EUA, 1781 a 1789"
+          ]
+        ]
+      },
+      "notas": "Layout tabela."
+    },
+    {
+      "layout": "pergunta",
+      "titulo": "Quem deve decidir, o país inteiro ou cada parte dele?",
+      "texto": "A pergunta atravessa 1787, 1891 e 1988, e continua aberta.",
+      "imagem": "luzes-brasil-2025",
+      "notas": "Layout pergunta."
+    },
+    {
+      "layout": "afirmacao",
+      "titulo": "Federalismo é uma disputa permanente sobre quem decide o quê",
+      "imagem": "botafogo-1909",
+      "notas": "Layout afirmacao."
+    },
+    {
+      "layout": "lista",
+      "titulo": "A federação é cláusula pétrea",
+      "imagem": "luzes-brasil-2025",
+      "itens": [
+        "Nenhuma emenda pode tender a abolir a forma federativa de Estado",
+        "O voto direto, secreto, universal e periódico também é protegido",
+        "A separação dos Poderes e os direitos e garantias individuais também"
+      ],
+      "fonte": "Constituição Federal, art. 60, § 4º.",
+      "notas": "Layout lista. Texto largo e uma tira de imagem."
+    },
+    {
+      "layout": "diagrama",
+      "titulo": "A dupla segurança de Madison",
+      "itens": [
+        "O poder do povo é dividido entre dois governos",
+        "Cada governo divide seu poder entre três ramos",
+        "Um controla o outro, e cada um controla a si mesmo"
+      ],
+      "diagrama": {
+        "tipo": "cadeia",
+        "nos": [
+          "Povo",
+          "União e estados",
+          "Três poderes em cada um"
+        ],
+        "destaque": [
+          0
+        ]
+      },
+      "fonte": "Madison, O Federalista nº 51 (1788).",
+      "notas": "Layout diagrama.",
+      "etapas": true
+    },
+    {
+      "layout": "fechamento",
+      "titulo": "Para guardar",
+      "imagem": "capitolio-1846",
+      "itens": [
+        "Federação é divisão de poder garantida pela Constituição",
+        "EUA juntaram partes, e o Brasil manteve junto um Estado unitário",
+        "Desde 1988, União, estados e municípios disputam e coordenam"
+      ],
+      "notas": "Layout fechamento."
+    },
+    {
+      "layout": "referencias",
+      "titulo": "Referências",
+      "referencias": [
+        "ABRUCIO, F. L. *Os barões da federação*. São Paulo: Hucitec, 1998.",
+        "ARRETCHE, M. *Democracia, federalismo e centralização no Brasil*. Rio de Janeiro: FGV/Fiocruz, 2012.",
+        "BRASIL. *Constituição da República Federativa do Brasil*. Brasília, 1988.",
+        "HAMILTON, A.; MADISON, J.; JAY, J. *The Federalist*. Nova York: J. and A. McLean, 1788.",
+        "RIKER, W. *Federalism: origin, operation, significance*. Boston: Little, Brown, 1964.",
+        "STEPAN, A. Federalism and democracy: beyond the U.S. model. *Journal of Democracy*, v. 10, n. 4, 1999."
+      ],
+      "notas": "Layout referencias."
+    },
+    {
+      "layout": "livre",
+      "titulo": "Quem cuida de quê",
+      "notas": "Layout livre: HTML escrito à mão, medido como qualquer outro.",
+      "fonte": "Constituição Federal, arts. 21, 30, 144 e 211.",
+      "html": "<div style=\"display:grid;grid-template-rows:auto 1fr auto;height:100%;gap:36px\"><h2 class=\"sk-titulo\" data-role=\"titulo\" data-txt style=\"font-size:96px\">Quem cuida de quê</h2><div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:36px;min-height:0\"><div class=\"sk-campo\" style=\"--sobre-campo:#F6F1E7;--sobre-campo-2:#F6F1E7;--campo:#2A4D71;border-radius:18px;padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:40px\"><h3 data-role=\"corpo\" data-txt style=\"margin:0;font-family:var(--f-titulo);font-size:84px;line-height:1.08\">União</h3><ul class=\"sk-itens\" style=\"--c:56;gap:24px\"><li data-role=\"corpo\" data-txt>Defesa nacional</li><li data-role=\"corpo\" data-txt>Emissão de moeda</li><li data-role=\"corpo\" data-txt>Relações exteriores</li></ul></div><div class=\"sk-campo\" style=\"--sobre-campo:#F6F1E7;--sobre-campo-2:#F6F1E7;--campo:#A5492A;border-radius:18px;padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:40px\"><h3 data-role=\"corpo\" data-txt style=\"margin:0;font-family:var(--f-titulo);font-size:84px;line-height:1.08\">Estados</h3><ul class=\"sk-itens\" style=\"--c:56;gap:24px\"><li data-role=\"corpo\" data-txt>Polícia militar</li><li data-role=\"corpo\" data-txt>Ensino médio</li><li data-role=\"corpo\" data-txt>Sistema penitenciário</li></ul></div><div class=\"sk-campo\" style=\"--sobre-campo:#F6F1E7;--sobre-campo-2:#F6F1E7;--campo:#55653A;border-radius:18px;padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:40px\"><h3 data-role=\"corpo\" data-txt style=\"margin:0;font-family:var(--f-titulo);font-size:84px;line-height:1.08\">Municípios</h3><ul class=\"sk-itens\" style=\"--c:56;gap:24px\"><li data-role=\"corpo\" data-txt>Educação infantil</li><li data-role=\"corpo\" data-txt>Transporte coletivo local</li><li data-role=\"corpo\" data-txt>Coleta de lixo</li></ul></div></div><p class=\"sk-fonte\" data-role=\"legenda\" data-txt>Exemplos de competências na Constituição Federal (arts. 21, 30, 144 e 211) e em leis federais.</p></div>"
+    },
+    {
+      "layout": "numeros",
+      "titulo": "A federação brasileira em números",
+      "numeros": [
+        {
+          "valor": "27",
+          "texto": "unidades federativas, contando o Distrito Federal"
+        },
+        {
+          "valor": "5.570",
+          "texto": "municípios com autonomia política"
+        },
+        {
+          "valor": "81",
+          "texto": "senadores, três por unidade"
+        },
+        {
+          "valor": "513",
+          "texto": "deputados federais"
+        }
+      ],
+      "fonte": "Constituição Federal de 1988, arts. 18, 45 e 46. Lei Complementar 78/1993. IBGE, Censo Demográfico 2022 (5.570 municípios).",
+      "notas": "Quatro números para situar a escala da federação antes dos gráficos. (1 min)"
+    },
+    {
+      "layout": "evidencia",
+      "titulo": "O país ganhou mil municípios nos anos 1990 e quase parou depois de 1996",
+      "grafico": {
+        "tipo": "linha",
+        "rotulos": [
+          "1940",
+          "1950",
+          "1960",
+          "1970",
+          "1980",
+          "1991",
+          "2000",
+          "2010",
+          "2022"
+        ],
+        "valores": [
+          1574,
+          1889,
+          2766,
+          3952,
+          3974,
+          4491,
+          5507,
+          5565,
+          5570
+        ],
+        "anotacoes": [
+          {
+            "i": 5,
+            "texto": "1988 passa a criação aos estados",
+            "lado": "acima"
+          },
+          {
+            "i": 7,
+            "texto": "EC 15/1996 exige lei federal e plebiscito",
+            "lado": "abaixo"
+          }
+        ]
+      },
+      "fonte": "IBGE, Atlas Nacional do Brasil 2010, p. 37 (1940 a 2000). IBGE, Censos 2010 e 2022. Constituição de 1988, art. 18, § 4º, e Emenda Constitucional 15/1996.",
+      "notas": "Entre 1991 e 2000 foram 1.016 novos municípios. Depois da EC 15, só 63 em duas décadas. (1 min)"
+    },
+    {
+      "layout": "grafico",
+      "titulo": "No Senado, o Norte pesa três vezes o que pesa na população",
+      "texto": "Cada unidade elege três senadores, seja qual for o tamanho dela.",
+      "grafico": {
+        "tipo": "halteres",
+        "rotulos": [
+          "Norte",
+          "Nordeste",
+          "Centro-Oeste",
+          "Sudeste",
+          "Sul"
+        ],
+        "antes": [
+          8.5,
+          26.9,
+          8.0,
+          41.8,
+          14.7
+        ],
+        "depois": [
+          25.9,
+          33.3,
+          14.8,
+          14.8,
+          11.1
+        ],
+        "nomes": [
+          "população",
+          "Senado"
+        ],
+        "unidade": "%",
+        "casas": 1,
+        "destaque": [
+          0,
+          3
+        ]
+      },
+      "fonte": "IBGE, Censo Demográfico 2022 (população por região, DOU 2023). Constituição de 1988, art. 46 (três senadores por unidade). Cálculo das proporções pelo autor.",
+      "notas": "Norte tem 8,5% da população e 25,9% do Senado. Sudeste tem 41,8% da população e 14,8% do Senado. (1 min)"
+    },
+    {
+      "layout": "diagrama",
+      "titulo": "Do eleitorado ao voto que decide",
+      "itens": [
+        "Abstenção de 20,6% no 2º turno de 2022",
+        "5,7 milhões de votos brancos e nulos"
+      ],
+      "diagrama": {
+        "tipo": "funil",
+        "etapas": [
+          {
+            "rotulo": "eleitores aptos",
+            "valor": "156,5 mi"
+          },
+          {
+            "rotulo": "compareceram",
+            "valor": "124,3 mi"
+          },
+          {
+            "rotulo": "votos válidos",
+            "valor": "118,6 mi"
+          },
+          {
+            "rotulo": "votos do eleito",
+            "valor": "60,3 mi"
+          }
+        ]
+      },
+      "fonte": "TSE, Eleições Gerais 2022, totalização do 2º turno (30/10/2022). Eleitorado apto 156.454.011, comparecimento 124.252.796, válidos 118.552.353, brancos 1.769.678, nulos 3.930.765, Lula 60.345.999.",
+      "notas": "O funil mostra a ordem das etapas. As larguras não são proporcionais. (1 min)"
+    },
+    {
+      "layout": "grafico",
+      "titulo": "A Câmara tem piso de 8 e teto de 70 deputados por estado",
+      "texto": "Roraima, com 0,6 milhão de habitantes, e o Amazonas, com 3,9 milhões, elegem 8 cada.",
+      "grafico": {
+        "tipo": "dispersao",
+        "eixo_x": "habitantes (milhões)",
+        "eixo_y": "deputados",
+        "pontos": [
+          {
+            "x": 1.6,
+            "y": 8
+          },
+          {
+            "x": 0.8,
+            "y": 8
+          },
+          {
+            "x": 3.9,
+            "y": 8,
+            "rotulo": "Amazonas"
+          },
+          {
+            "x": 0.6,
+            "y": 8,
+            "rotulo": "Roraima"
+          },
+          {
+            "x": 8.1,
+            "y": 17
+          },
+          {
+            "x": 0.7,
+            "y": 8
+          },
+          {
+            "x": 1.5,
+            "y": 8
+          },
+          {
+            "x": 6.8,
+            "y": 18
+          },
+          {
+            "x": 3.3,
+            "y": 10
+          },
+          {
+            "x": 8.8,
+            "y": 22
+          },
+          {
+            "x": 3.3,
+            "y": 8
+          },
+          {
+            "x": 4.0,
+            "y": 12
+          },
+          {
+            "x": 9.1,
+            "y": 25
+          },
+          {
+            "x": 3.1,
+            "y": 9
+          },
+          {
+            "x": 2.2,
+            "y": 8
+          },
+          {
+            "x": 14.1,
+            "y": 39
+          },
+          {
+            "x": 20.5,
+            "y": 53,
+            "rotulo": "Minas Gerais"
+          },
+          {
+            "x": 3.8,
+            "y": 10
+          },
+          {
+            "x": 16.1,
+            "y": 46
+          },
+          {
+            "x": 44.4,
+            "y": 70,
+            "rotulo": "São Paulo"
+          },
+          {
+            "x": 11.4,
+            "y": 30
+          },
+          {
+            "x": 7.6,
+            "y": 16
+          },
+          {
+            "x": 10.9,
+            "y": 31
+          },
+          {
+            "x": 2.8,
+            "y": 8
+          },
+          {
+            "x": 3.7,
+            "y": 8
+          },
+          {
+            "x": 7.1,
+            "y": 17
+          },
+          {
+            "x": 2.8,
+            "y": 8
+          }
+        ]
+      },
+      "fonte": "IBGE, Censo Demográfico 2022 (população por UF, DOU 2023). Lei Complementar 78/1993 e Constituição de 1988, art. 45, § 1º.",
+      "notas": "Cada ponto é uma unidade da federação. A linha de baixo é o piso de 8 deputados. (1 min)"
+    },
+    {
+      "layout": "diagrama",
+      "titulo": "Quem regula e quem executa",
+      "itens": [
+        "A União concentra a regulação (Arretche, 2012)",
+        "Estados e municípios executam boa parte das políticas"
+      ],
+      "diagrama": {
+        "tipo": "matriz",
+        "nome_x": "quem executa",
+        "nome_y": "quem regula",
+        "eixo_x": [
+          "União",
+          "local"
+        ],
+        "eixo_y": [
+          "local",
+          "União"
+        ],
+        "quadrantes": [
+          "Previdência social",
+          "SUS e educação básica",
+          "Combinação rara",
+          "Transporte urbano"
+        ],
+        "destaque": 1
+      },
+      "fonte": "Arretche, M. Democracia, federalismo e centralização no Brasil. FGV e Fiocruz, 2012. Constituição de 1988, arts. 30, 198 e 201.",
+      "notas": "O quadrante em destaque é o argumento central de Arretche. (1 min)"
+    },
+    {
+      "layout": "linha-do-tempo",
+      "orientacao": "vertical",
+      "titulo": "Como o Brasil chegou a 26 estados",
+      "eventos": [
+        {
+          "ano": "1891",
+          "texto": "As 20 províncias viram estados",
+          "valor": "20"
+        },
+        {
+          "ano": "1960",
+          "texto": "A antiga capital vira o estado da Guanabara",
+          "valor": "21"
+        },
+        {
+          "ano": "1962",
+          "texto": "O Acre passa de território a estado",
+          "valor": "22"
+        },
+        {
+          "ano": "1982",
+          "texto": "Fusão do Rio, Mato Grosso do Sul e Rondônia",
+          "valor": "23"
+        },
+        {
+          "ano": "1988",
+          "texto": "Tocantins é criado, Roraima e Amapá viram estados",
+          "valor": "26"
+        }
+      ],
+      "fonte": "Constituição de 1891, art. 2º. Lei 3.752/1960 (Guanabara). Lei 4.070/1962 (Acre). LC 20/1974 (fusão), LC 31/1977 (MS) e LC 41/1981 (RO). Constituição de 1988, ADCT, arts. 13 e 14.",
+      "notas": "O número à direita é o total de estados depois de cada mudança. (1 min)"
+    },
+    {
+      "layout": "evidencia",
+      "titulo": "O resultado de 2022 caiu dentro da margem da última pesquisa",
+      "grafico": {
+        "tipo": "pontos",
+        "rotulos": [
+          "Lula, pesquisa",
+          "Lula, urnas",
+          "Bolsonaro, pesquisa",
+          "Bolsonaro, urnas"
+        ],
+        "valores": [
+          52,
+          50.9,
+          48,
+          49.1
+        ],
+        "inferior": [
+          50,
+          50.9,
+          46,
+          49.1
+        ],
+        "superior": [
+          54,
+          50.9,
+          50,
+          49.1
+        ],
+        "referencia": 50,
+        "unidade": "%",
+        "eixo": "votos válidos",
+        "destaque": [
+          1,
+          3
+        ],
+        "min": 44,
+        "max": 56
+      },
+      "fonte": "Datafolha, 28 e 29/10/2022, 8.320 entrevistas, margem de 2 pontos com 95% de confiança, registro BR-08297/2022. TSE, Eleições Gerais 2022, totalização do 2º turno (30/10/2022).",
+      "notas": "A linha tracejada marca 50% dos válidos. As barras são a margem de erro da pesquisa. (1 min)"
+    },
+    {
+      "layout": "dividido",
+      "titulo": "Três níveis, uma lista comum",
+      "itens": [
+        "Saúde, educação e meio ambiente são tarefa comum (art. 23)",
+        "Cada nível guarda ainda poderes próprios (arts. 21, 25 e 30)"
+      ],
+      "diagrama": {
+        "tipo": "venn",
+        "conjuntos": [
+          "União",
+          "Estados",
+          "Municípios"
+        ],
+        "intersecao": "art. 23"
+      },
+      "fonte": "Constituição de 1988, arts. 21, 23, 25 e 30.",
+      "notas": "A interseção é a competência comum, que exige cooperação. (1 min)"
+    },
+    {
+      "layout": "grafico",
+      "titulo": "Do 1º ao 2º turno, a vantagem caiu de 5,2 para 1,8 ponto",
+      "texto": "Os 8,4% dos outros candidatos se dividiram no 2º turno.",
+      "itens": [
+        "Lula ganhou 3,1 milhões de votos",
+        "Bolsonaro ganhou 7,1 milhões"
+      ],
+      "grafico": {
+        "tipo": "empilhadas",
+        "rotulos": [
+          "1º turno",
+          "2º turno"
+        ],
+        "percentual": true,
+        "casas": 1,
+        "series": [
+          {
+            "nome": "Lula",
+            "valores": [
+              57259504,
+              60345999
+            ]
+          },
+          {
+            "nome": "Bolsonaro",
+            "valores": [
+              51072345,
+              58206354
+            ]
+          },
+          {
+            "nome": "outros",
+            "valores": [
+              9897870,
+              0
+            ]
+          }
+        ]
+      },
+      "fonte": "TSE, Eleições Gerais 2022, totalização do 1º turno (válidos 118.229.719) e do 2º turno (válidos 118.552.353). Outros = válidos menos os dois primeiros.",
+      "notas": "Percentuais dos votos válidos. (1 min)"
+    },
+    {
+      "layout": "numeros",
+      "titulo": "Bancadas na Câmara, do teto ao piso",
+      "torres": true,
+      "destaque": 0,
+      "numeros": [
+        {
+          "valor": "70",
+          "texto": "São Paulo, 44,4 milhões de habitantes"
+        },
+        {
+          "valor": "53",
+          "texto": "Minas Gerais, 20,5 milhões"
+        },
+        {
+          "valor": "46",
+          "texto": "Rio de Janeiro, 16,1 milhões"
+        },
+        {
+          "valor": "8",
+          "texto": "Roraima, 0,6 milhão"
+        }
+      ],
+      "fonte": "Lei Complementar 78/1993 (bancadas). IBGE, Censo Demográfico 2022 (população por UF, DOU 2023).",
+      "notas": "A altura de cada torre é proporcional à bancada. (1 min)"
+    },
+    {
+      "layout": "diagrama",
+      "titulo": "A federação que não aparece na urna",
+      "itens": [
+        "O voto escolhe quem governa cada nível",
+        "Regras e recursos passam pela União"
+      ],
+      "diagrama": {
+        "tipo": "iceberg",
+        "acima": [
+          "Governadores e prefeitos eleitos"
+        ],
+        "abaixo": [
+          "Transferências constitucionais (FPE e FPM)",
+          "Normas gerais editadas pela União",
+          "SUS e Fundeb, desenhados em lei federal"
+        ]
+      },
+      "fonte": "Constituição de 1988, arts. 24, 159 e 198. Lei 14.113/2020 (Fundeb). Arretche (2012).",
+      "notas": "Acima da linha, o que a plateia vê. Abaixo, o que sustenta. (1 min)"
+    }
+  ]
+}

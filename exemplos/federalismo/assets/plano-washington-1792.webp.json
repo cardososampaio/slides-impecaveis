@@ -1,0 +1,29 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "Plan of the city of Washington",
+  "autor": "L'Enfant, Pierre Charles, 1754-1825, Thackara & Vallance",
+  "data": "1792",
+  "url_pagina": "https://www.loc.gov/item/88694159/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/gmd/gmd385/g3850/g3850/ct000509.tif",
+  "direitos": "(não informado)",
+  "licenca": "domínio público. Mapa impresso em 1792, sem restrição registrada no item.",
+  "credito_sugerido": "Plan of the city of Washington. Library of Congress.",
+  "arquivo_local": "loc_88694159.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.05,0.03,0.97,0.97",
+    "redução para lado maior 2400px",
+    "salvo como webp q84, 2400x1948px"
+  ],
+  "origem_local": "loc_88694159.jpg",
+  "largura": 2400,
+  "altura": 1948,
+  "licenca_original_do_script": "VERIFICAR (leia 'direitos')",
+  "decisao_direitos": "Conferido na página do item e pela data de publicação, em 2026-10-21.",
+  "texto_na_imagem": {
+    "md5": "9834a5954fd6",
+    "metodo": "ocr",
+    "palavras": 11,
+    "indice_figura": 0.072
+  }
+}

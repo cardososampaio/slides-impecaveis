@@ -1,0 +1,38 @@
+/* slides-impecaveis · extensão de layouts (numeros, evidencia, linha do tempo vertical) */
+
+/* numeros: grade que ocupa a tela, número grande com contagem */
+.sk-l-numeros{display:grid;grid-template-rows:auto 1fr;padding:var(--my) var(--mx) 96px;gap:52px}
+.sk-nums{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:56px 72px;min-height:0}
+.sk-nums-cel{display:flex;flex-direction:column;justify-content:center;gap:22px;min-width:0;border-top:8px solid var(--acento2);padding-top:34px}
+.sk-nums-cel.sk-aqui{border-top-color:var(--acento)}
+.sk-l-numeros .sk-num{font-size:max(64px,calc(var(--n,300) * var(--kn,.6) * 1px));line-height:.9;white-space:nowrap}
+.sk-l-numeros .sk-num small{font-size:.38em;margin-left:.16em}
+.sk-l-numeros .sk-texto{font-size:calc(var(--c) * 1px);line-height:1.22}
+.sk-fileiras .sk-nums{gap:36px 80px}
+.sk-fileiras .sk-nums-cel{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:56px;border-top-width:6px;padding-top:12px}
+.sk-fileiras .sk-num{min-width:calc(var(--nch,3) * .6em);text-align:right}
+.sk-fileiras .sk-texto{font-size:calc(var(--c) * 1.08px)}
+.sk-com-torres .sk-nums-cel{justify-content:flex-start}
+.sk-com-torres .sk-torre{flex:1;min-height:120px;position:relative}
+.sk-torre svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+/* evidencia: título-afirmação no alto e o gráfico grande embaixo */
+.sk-l-evidencia{display:grid;grid-template-rows:auto 1fr;padding:72px var(--mx) 84px;gap:34px}
+.sk-l-evidencia .sk-cab{max-width:1640px}
+.sk-ev-graf{position:relative;min-height:0;background:var(--papel);border-radius:var(--raio,16px);color:var(--tinta)}
+.sk-ev-graf svg{position:absolute;inset:26px 28px 22px;width:calc(100% - 56px);height:calc(100% - 48px)}
+
+/* linha do tempo vertical, com valor opcional em cada evento */
+.sk-l-ltv{display:grid;grid-template-columns:32% 1fr}
+.sk-ltv-vis{position:relative;height:1080px}
+.sk-ltv-vis > *{position:absolute;inset:0}
+.sk-ltv-dir{display:grid;grid-template-rows:auto 1fr;gap:44px;padding:var(--my) var(--mx) 96px 84px;min-height:0;min-width:0}
+.sk-ltv{display:grid;grid-auto-rows:minmax(0,1fr);position:relative;min-height:0;--ano-w:calc(var(--ano-ch,4) * 46px)}
+.sk-ltv::before{content:"";position:absolute;left:calc(var(--ano-w) + 38px);top:18px;bottom:18px;width:6px;margin-left:-3px;background:var(--linha-forte,var(--tinta));border-radius:3px;transform-origin:top}
+.sk-ltv-ev{display:grid;grid-template-columns:var(--ano-w) 1fr;column-gap:76px;align-items:center;position:relative;min-height:0}
+.sk-com-valor .sk-ltv-ev{grid-template-columns:var(--ano-w) 1fr auto}
+.sk-ltv-ev::before{content:"";position:absolute;left:calc(var(--ano-w) + 38px);top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--fundo);border:7px solid var(--acento);box-sizing:border-box}
+.sk-ltv .sk-ano{font-variation-settings:var(--fvs-titulo,normal);font-family:var(--f-num,var(--f-titulo));font-weight:700;font-size:80px;line-height:1;color:var(--acento);letter-spacing:-.02em;text-align:right}
+.sk-ltv .sk-texto{font-size:calc(var(--c) * 1px);line-height:1.22}
+.sk-ltv-valor{font-family:var(--f-num,var(--f-titulo));font-weight:700;font-size:calc(var(--c) * 1.15px);line-height:1;white-space:nowrap;padding-left:12px;color:var(--tinta)}
+html.sk-mov .sk-ativo .sk-ltv::before{animation:sk-cresce-y 1.4s var(--ease2) both .2s}

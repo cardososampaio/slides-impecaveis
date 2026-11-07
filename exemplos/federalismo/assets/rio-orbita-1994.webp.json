@@ -1,0 +1,24 @@
+{
+  "fonte": "NASA Image and Video Library",
+  "titulo": "STS-65 Earth observation of Rio de Janeiro in Brazil taken from OV-102",
+  "autor": "JSC",
+  "data": "1994-07-23",
+  "url_pagina": "https://images.nasa.gov/details/STS065-88-001",
+  "url_arquivo": "https://images-assets.nasa.gov/image/STS065-88-001/STS065-88-001~large.jpg",
+  "licenca": "domínio público (imagens da NASA, salvo indicação em contrário)",
+  "direitos": "Ver https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "credito_sugerido": "STS-65 Earth observation of Rio de Janeiro in Brazil taken from OV-102. NASA.",
+  "arquivo_local": "nasa_STS065-88-001.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "salvo como webp q84, 1920x1920px"
+  ],
+  "origem_local": "nasa_STS065-88-001.jpg",
+  "largura": 1920,
+  "altura": 1920,
+  "texto_na_imagem": {
+    "md5": "8ef5b97e4524",
+    "metodo": "heuristica",
+    "indice_figura": 0.0
+  }
+}

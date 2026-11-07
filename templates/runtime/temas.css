@@ -1,0 +1,192 @@
+/* Temas. Cada um é um mundo visual completo, não uma troca de cor.
+   Índice com fontes, arte e indicações de uso em templates/temas.json.
+   --campos lista as cores chapadas dos blocos (seções), na ordem de uso.
+   Tinta sobre fundo, papel e cada campo passa de 4,5:1. Citações em redondo, nunca itálico. */
+
+/* TABULEIRO · mesa analógica, jogo de tabuleiro modernista, papel osso, campos chapados */
+html[data-tema="tabuleiro"]{
+  --fundo:#ECE4D3;--papel:#F8F3EA;--tinta:#1C2632;--tinta2:#4A4038;--acento:#A5492A;--acento2:#2A4D71;--sobre-acento:#FBF6EC;
+  --marca:rgba(242,195,91,.62);--marca-campo:rgba(242,195,91,.45);--linha:#CBBDA3;--linha-forte:#1C2632;--trilha-cor:#1C2632;
+  --painel:#F8F3EA;--scrim:rgba(28,38,50,.82);
+  --campos:#2A4D71,#A5492A,#55653A,#D3A03C,#86ABC9,#1C2632;
+  --f-titulo:'Jost',sans-serif;--f-corpo:'Atkinson Hyperlegible Next',sans-serif;--f-num:'Jost',sans-serif;--f-citacao:'Jost',sans-serif;
+  --peso-titulo:600;--esp-titulo:-0.022em;--marcador-raio:4px;--raio:18px;
+  --textura:repeating-linear-gradient(0deg,rgba(60,40,20,.028) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(60,40,20,.022) 0 1px,transparent 1px 5px);
+}
+/* GRAVURA · museu e livro antigo: papel vergé, tinta sépia, Caslon de livro, filetes */
+html[data-tema="gravura"]{
+  --fundo:#F1EADB;--papel:#FBF7EE;--tinta:#231C15;--tinta2:#57493B;--acento:#8C2F1C;--acento2:#3E5C76;--sobre-acento:#FBF7EE;
+  --marca:rgba(196,150,74,.42);--marca-campo:rgba(240,214,160,.34);--linha:#CDBFA6;--linha-forte:#231C15;--trilha-cor:#231C15;
+  --painel:#FBF7EE;--scrim:rgba(35,28,21,.84);
+  --campos:#2F2A24,#8C2F1C,#3E5C76,#5E5236,#7A5A2E,#4B3A2E;
+  --f-titulo:'Libre Caslon Text',serif;--f-corpo:'Source Serif 4',serif;--f-num:'Libre Caslon Text',serif;--f-citacao:'Libre Caslon Text',serif;--peso-citacao:400;
+  --peso-titulo:600;--esp-titulo:-0.018em;--alt-titulo:1.08;--marcador-raio:0;--marcador-giro:rotate(45deg);--raio:6px;--raio-img:2px;
+  --textura:repeating-linear-gradient(90deg,rgba(80,60,30,.03) 0 1px,transparent 1px 7px),repeating-linear-gradient(0deg,rgba(80,60,30,.018) 0 1px,transparent 1px 38px);
+}
+/* EDITORIAL · revista e cartaz: creme, grafite, bordô, títulos condensados em caixa alta, fotografia grande */
+html[data-tema="editorial"]{
+  --fundo:#EFEBE3;--papel:#F8F5EF;--tinta:#16181B;--tinta2:#44474C;--acento:#7A1F2B;--acento2:#B07A35;--sobre-acento:#F8F5EF;
+  --marca:rgba(176,122,53,.38);--marca-campo:rgba(255,255,255,.22);--linha:#CFC8BC;--linha-forte:#16181B;--trilha-cor:#16181B;
+  --painel:#F8F5EF;--scrim:rgba(18,18,20,.84);
+  --campos:#16181B,#7A1F2B,#2E3A44,#5B4A36,#3F4A3A,#16181B;
+  --f-titulo:'Oswald',sans-serif;--f-corpo:'Atkinson Hyperlegible Next',sans-serif;--f-num:'Oswald',sans-serif;--f-citacao:'Atkinson Hyperlegible Next',sans-serif;--peso-citacao:600;
+  --peso-titulo:600;--caixa-titulo:uppercase;--esp-titulo:0.004em;--alt-titulo:1.1;--marcador-raio:0;--raio:4px;--raio-img:0;
+  --textura:none;
+}
+/* NOTURNO · sala escura: verde-negro, ouro e garança, Newsreader, constelações que se movem */
+html[data-tema="noturno"]{
+  --fundo:#111819;--papel:#1B2523;--tinta:#EEE6D3;--tinta2:#BDB4A0;--acento:#E8B46A;--acento2:#D26B4C;--sobre-acento:#111819;
+  --marca:rgba(232,180,106,.30);--marca-campo:rgba(232,180,106,.30);--linha:#3A4643;--linha-forte:#E8B46A;--trilha-cor:#E8B46A;
+  --painel:#151E1D;--scrim:rgba(8,12,12,.86);
+  --campos:#1C2B2A,#2B1F1B,#1D2534,#28291D,#2A1E2A,#152020;
+  --f-titulo:'Newsreader',serif;--f-corpo:'Atkinson Hyperlegible Next',sans-serif;--f-num:'Newsreader',serif;--f-citacao:'Newsreader',serif;--peso-citacao:500;
+  --peso-titulo:560;--esp-titulo:-0.015em;--fvs-titulo:"opsz" 60;--fvs-citacao:"opsz" 36;--alt-titulo:1.04;--marcador-raio:50%;--raio:10px;
+  --textura:radial-gradient(1200px 700px at 78% 28%,rgba(232,180,106,.06),transparent 70%);--textura-op:1;
+}
+/* DATILÓGRAFO · escrivaninha: papel de fichário, tinta azul-negra de máquina, carimbo vermelho, azul suave */
+html[data-tema="datilografo"]{
+  --fundo:#EAE3D2;--papel:#FBF8F1;--tinta:#1F2A44;--tinta2:#47506A;--acento:#B23A2B;--acento2:#3B6593;--sobre-acento:#FBF8F1;
+  --marca:rgba(79,124,172,.30);--marca-campo:rgba(255,255,255,.26);--linha:#C9BFAA;--linha-forte:#1F2A44;--trilha-cor:#1F2A44;
+  --painel:#FBF8F1;--scrim:rgba(31,42,68,.84);
+  --campos:#1F2A44,#3B6593,#B23A2B,#5F7254,#7D6128,#1F2A44;
+  --f-titulo:'Courier Prime',monospace;--f-corpo:'Atkinson Hyperlegible Next',sans-serif;--f-num:'Courier Prime',monospace;--f-citacao:'Courier Prime',monospace;
+  --peso-titulo:700;--esp-titulo:-0.04em;--marcador-raio:0;--raio:6px;
+  --textura:repeating-linear-gradient(0deg,rgba(31,42,68,.045) 0 2px,transparent 2px 54px);
+}
+/* CARTOGRÁFICO · atlas antigo: pergaminho, sépia, verde-floresta e marinho, rotas e rosa dos ventos */
+html[data-tema="cartografico"]{
+  --fundo:#EFE4C9;--papel:#F8F1DF;--tinta:#2A2017;--tinta2:#5A4633;--acento:#2E5B3E;--acento2:#24406B;--sobre-acento:#F8F1DF;
+  --marca:rgba(201,160,84,.42);--marca-campo:rgba(233,205,140,.32);--linha:#CDBB94;--linha-forte:#2A2017;--trilha-cor:#2A2017;
+  --painel:#F8F1DF;--scrim:rgba(42,32,23,.84);
+  --campos:#24406B,#2E5B3E,#6B4A2B,#7A3B2A,#3C4A55,#2A2017;
+  --f-titulo:'Spectral',serif;--f-corpo:'Source Serif 4',serif;--f-num:'Spectral',serif;--f-citacao:'Spectral',serif;--peso-citacao:400;
+  --peso-titulo:600;--esp-titulo:-0.01em;--alt-titulo:1.06;--marcador-raio:50%;--raio:4px;--raio-img:2px;
+  --textura:repeating-linear-gradient(0deg,rgba(90,70,40,.035) 0 1px,transparent 1px 90px),repeating-linear-gradient(90deg,rgba(90,70,40,.035) 0 1px,transparent 1px 90px);
+}
+/* FLORESTA · caderno de campo: aveia, verde-escuro e terracota, curvas de nível */
+html[data-tema="floresta"]{
+  --fundo:#E9E2D0;--papel:#F5F0E3;--tinta:#1C2A21;--tinta2:#45503F;--acento:#9C4A2A;--acento2:#2E4A36;--sobre-acento:#F5F0E3;
+  --marca:rgba(196,160,82,.45);--marca-campo:rgba(214,190,120,.36);--linha:#C9BEA2;--linha-forte:#1C2A21;--trilha-cor:#1C2A21;
+  --painel:#F5F0E3;--scrim:rgba(28,42,33,.84);
+  --campos:#2E4A36,#9C4A2A,#56583A,#1C2A21,#6E5A36,#3A5A55;
+  --f-titulo:'Bricolage Grotesque',sans-serif;--f-corpo:'Public Sans',sans-serif;--f-num:'Bricolage Grotesque',sans-serif;--f-citacao:'Bricolage Grotesque',sans-serif;--peso-citacao:500;
+  --peso-titulo:700;--esp-titulo:-0.025em;--alt-titulo:1.04;--marcador-raio:50% 0;--raio:22px;--raio-img:14px;
+  --textura:repeating-linear-gradient(0deg,rgba(40,50,30,.025) 0 1px,transparent 1px 6px);
+}
+/* RISOGRAFIA · impressão de uma tinta: ferrugem sobre creme, meio-tom, letras pesadas */
+html[data-tema="risografia"]{
+  --fundo:#F3EBDC;--papel:#FAF5EA;--tinta:#3B1D14;--tinta2:#6A3424;--acento:#A63E1C;--acento2:#7A2E17;--sobre-acento:#FAF5EA;
+  --marca:rgba(214,120,80,.32);--marca-campo:rgba(250,245,234,.24);--linha:#DCC3AE;--linha-forte:#A63E1C;--trilha-cor:#A63E1C;
+  --painel:#FAF5EA;--scrim:rgba(59,29,20,.84);
+  --campos:#A63E1C,#3B1D14,#7A2E17,#8E4A26,#5B2414,#A63E1C;
+  --f-titulo:'Archivo',sans-serif;--f-corpo:'Archivo',sans-serif;--f-num:'Archivo',sans-serif;--f-citacao:'Archivo',sans-serif;--peso-citacao:600;
+  --peso-titulo:800;--esp-titulo:-0.03em;--alt-titulo:1.0;--marcador-raio:50%;--raio:0;--raio-img:0;
+  --textura:radial-gradient(rgba(166,62,28,.075) 1.3px,transparent 1.8px) 0 0/12px 12px;
+}
+/* PRANCHETA · mesa de desenho técnico: pedra quente, grafite, azul de cópia, arcos de compasso */
+html[data-tema="prancheta"]{
+  --fundo:#E5DFD4;--papel:#F2EEE6;--tinta:#22262A;--tinta2:#4C5257;--acento:#2B5878;--acento2:#9A4C2C;--sobre-acento:#F2EEE6;
+  --marca:rgba(120,160,190,.36);--marca-campo:rgba(242,238,230,.24);--linha:#C6BEB0;--linha-forte:#22262A;--trilha-cor:#22262A;
+  --painel:#F2EEE6;--scrim:rgba(34,38,42,.84);
+  --campos:#2B5878,#3A3F44,#7A5A3A,#4F603C,#22262A,#8A4A2E;
+  --f-titulo:'Barlow Condensed',sans-serif;--f-corpo:'Public Sans',sans-serif;--f-num:'Barlow Condensed',sans-serif;--f-citacao:'Public Sans',sans-serif;--peso-citacao:500;
+  --peso-titulo:600;--caixa-titulo:uppercase;--esp-titulo:0.01em;--alt-titulo:1.02;--marcador-raio:0;--raio:2px;--raio-img:0;
+  --textura:repeating-linear-gradient(0deg,rgba(34,38,42,.04) 0 1px,transparent 1px 40px),repeating-linear-gradient(90deg,rgba(34,38,42,.04) 0 1px,transparent 1px 40px);
+}
+/* PORCELANA · papel frio branco-azulado, marinho e azul suave, sem creme; capa com imagem no alto */
+html[data-tema="porcelana"]{
+  --fundo:#EDF1F5;--papel:#F8FAFC;--tinta:#14243A;--tinta2:#3D4F66;--acento:#2C5A8C;--acento2:#4D7098;--sobre-acento:#F8FAFC;
+  --marca:rgba(120,160,210,.34);--marca-campo:rgba(248,250,252,.22);--linha:#C5D0DC;--linha-forte:#14243A;--trilha-cor:#14243A;
+  --painel:#F8FAFC;--scrim:rgba(20,36,58,.84);
+  --campos:#1E3A5F,#2C5A8C,#14243A,#3F5E7E,#4A5868,#24486E;
+  --f-titulo:'Instrument Serif',serif;--f-corpo:'Schibsted Grotesk',sans-serif;--f-num:'Instrument Serif',serif;--f-citacao:'Instrument Serif',serif;--peso-citacao:400;
+  --peso-titulo:400;--esp-titulo:-0.012em;--alt-titulo:1.0;--marcador-raio:50%;--raio:12px;--raio-img:6px;
+  --textura:none;
+}
+html[data-tema="porcelana"] .sk-l-capa{grid-template-columns:100%;grid-template-rows:600px 480px}
+html[data-tema="porcelana"] .sk-l-capa .sk-im{grid-row:1;grid-column:1}
+html[data-tema="porcelana"] .sk-l-capa .sk-lado-texto{grid-row:2;grid-column:1;padding:60px var(--mx) 76px;display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:88px;row-gap:28px;align-content:center;align-items:center}
+html[data-tema="porcelana"] .sk-l-capa .sk-titulo{grid-column:1;grid-row:1 / span 3}
+html[data-tema="porcelana"] .sk-l-capa .sk-lado-texto > :not(.sk-titulo){grid-column:2}
+html[data-tema="porcelana"] .sk-l-capa .sk-fig{height:600px}
+/* KRAFT · papel pardo de embrulho, tinta marrom, letras slab, etiquetas e carimbos */
+html[data-tema="kraft"]{
+  --fundo:#CDAE82;--papel:#DCC49E;--tinta:#2A1A0E;--tinta2:#47301E;--acento:#6E2A16;--acento2:#2C4656;--sobre-acento:#F1E4CC;
+  --marca:rgba(241,228,204,.55);--marca-campo:rgba(241,228,204,.30);--linha:#A98B60;--linha-forte:#2A1A0E;--trilha-cor:#2A1A0E;
+  --painel:#DCC49E;--scrim:rgba(42,26,14,.86);
+  --campos:#3A2616,#6E2A16,#2C4656,#4A532A,#5A3B1F,#2A1A0E;
+  --f-titulo:'Zilla Slab',serif;--f-corpo:'Zilla Slab',serif;--f-num:'Zilla Slab',serif;--f-citacao:'Zilla Slab',serif;--peso-citacao:600;
+  --peso-titulo:700;--esp-titulo:-0.015em;--alt-titulo:1.04;--marcador-raio:0;--raio:3px;--raio-img:2px;
+  --textura:repeating-linear-gradient(17deg,rgba(70,45,20,.05) 0 1px,transparent 1px 5px),repeating-linear-gradient(-63deg,rgba(255,240,210,.06) 0 1px,transparent 1px 9px);
+}
+/* LOUSA · quadro verde de sala de aula, giz creme, amarelo e azul claro, traços de giz */
+html[data-tema="lousa"]{
+  --fundo:#1F3A30;--papel:#25443A;--tinta:#F0EADA;--tinta2:#CFC8B4;--acento:#E9C964;--acento2:#9FC6DD;--sobre-acento:#1F3A30;
+  --marca:rgba(233,201,100,.30);--marca-campo:rgba(233,201,100,.30);--linha:#3F5E52;--linha-forte:#F0EADA;--trilha-cor:#F0EADA;
+  --painel:#1A332A;--scrim:rgba(14,30,24,.88);
+  --campos:#17302A,#283C46,#3A3324,#1B2B33,#2D3B28,#152A24;
+  --f-titulo:'Bricolage Grotesque',sans-serif;--f-corpo:'Atkinson Hyperlegible Next',sans-serif;--f-num:'Bricolage Grotesque',sans-serif;--f-citacao:'Bricolage Grotesque',sans-serif;--peso-citacao:500;
+  --peso-titulo:600;--esp-titulo:-0.02em;--alt-titulo:1.05;--marcador-raio:40% 55% 45% 60%;--raio:10px;--raio-img:6px;
+  --textura:repeating-linear-gradient(8deg,rgba(240,234,218,.018) 0 2px,transparent 2px 11px);
+}
+/* VELINO · campo pervinca escuro, tipo amarelo pálido, Spectral de livro, linhas de guilhoché */
+html[data-tema="velino"]{
+  --fundo:#2C3263;--papel:#343B72;--tinta:#F4EBBE;--tinta2:#D9D1A9;--acento:#F0C46E;--acento2:#E5A184;--sobre-acento:#2C3263;
+  --marca:rgba(240,196,110,.30);--marca-campo:rgba(240,196,110,.30);--linha:#4A5290;--linha-forte:#F0C46E;--trilha-cor:#F4EBBE;
+  --painel:#262B57;--scrim:rgba(22,25,52,.88);
+  --campos:#21264F,#3B2F5C,#1E3450,#3A3A6E,#2E2443,#1A2142;
+  --f-titulo:'Spectral',serif;--f-corpo:'Spectral',serif;--f-num:'Spectral',serif;--f-citacao:'Spectral',serif;--peso-citacao:400;
+  --peso-titulo:600;--esp-titulo:-0.015em;--alt-titulo:1.06;--marcador-raio:0;--marcador-giro:rotate(45deg);--raio:8px;--raio-img:4px;
+  --textura:none;
+}
+/* REVISTA · branco quase puro, preto e vermelhão, manchete serifada enorme */
+html[data-tema="revista"]{
+  --fundo:#FAF9F6;--papel:#FFFFFF;--tinta:#111111;--tinta2:#454545;--acento:#C2311B;--acento2:#111111;--sobre-acento:#FFFFFF;
+  --marca:rgba(194,49,27,.20);--marca-campo:rgba(255,255,255,.22);--linha:#D6D3CE;--linha-forte:#111111;--trilha-cor:#111111;
+  --painel:#FFFFFF;--scrim:rgba(17,17,17,.86);
+  --campos:#111111,#B42E19,#2B2B2B,#4E4A46,#111111,#7A2416;
+  --f-titulo:'Newsreader',serif;--f-corpo:'Public Sans',sans-serif;--f-num:'Newsreader',serif;--f-citacao:'Newsreader',serif;--peso-citacao:500;--fvs-citacao:"opsz" 48;
+  --peso-titulo:600;--esp-titulo:-0.03em;--alt-titulo:0.98;--fvs-titulo:"opsz" 72;--marcador-raio:0;--raio:0;--raio-img:0;
+  --textura:none;
+}
+/* DUNA · areia, ocre e terracota, curvas de dunas, Source Serif 4 com Archivo */
+html[data-tema="duna"]{
+  --fundo:#ECDFC6;--papel:#F6EEDD;--tinta:#2D2017;--tinta2:#5A4536;--acento:#9A4322;--acento2:#7A5418;--sobre-acento:#F6EEDD;
+  --marca:rgba(214,160,80,.42);--marca-campo:rgba(240,210,150,.30);--linha:#D3BF9C;--linha-forte:#2D2017;--trilha-cor:#2D2017;
+  --painel:#F6EEDD;--scrim:rgba(45,32,23,.84);
+  --campos:#9A4322,#6E4E1C,#4E3A2A,#2D2017,#7A5A3A,#843A20;
+  --f-titulo:'Source Serif 4',serif;--f-corpo:'Archivo',sans-serif;--f-num:'Source Serif 4',serif;--f-citacao:'Source Serif 4',serif;--peso-citacao:500;
+  --peso-titulo:600;--esp-titulo:-0.015em;--alt-titulo:1.02;--marcador-raio:50%;--raio:28px;--raio-img:20px;
+  --textura:repeating-radial-gradient(ellipse 1600px 500px at 50% 120%,rgba(120,80,40,.03) 0 2px,transparent 2px 26px);
+}
+/* CÍVICO · administração pública: cinza frio, azul institucional suave, verde musgo, quadras e blocos */
+html[data-tema="civico"]{
+  --fundo:#E7EAEE;--papel:#F6F7F9;--tinta:#18242F;--tinta2:#44505C;--acento:#2A5C8A;--acento2:#4C6A38;--sobre-acento:#F6F7F9;
+  --marca:rgba(110,150,200,.30);--marca-campo:rgba(246,247,249,.22);--linha:#C3CAD2;--linha-forte:#18242F;--trilha-cor:#18242F;
+  --painel:#F6F7F9;--scrim:rgba(24,36,47,.84);
+  --campos:#2A5C8A,#4C6A38,#18242F,#55606C,#3A4E66,#6A5A38;
+  --f-titulo:'Public Sans',sans-serif;--f-corpo:'Public Sans',sans-serif;--f-num:'Public Sans',sans-serif;--f-citacao:'Public Sans',sans-serif;--peso-citacao:500;
+  --peso-titulo:700;--esp-titulo:-0.02em;--alt-titulo:1.06;--marcador-raio:2px;--raio:8px;--raio-img:4px;
+  --textura:none;
+}
+html[data-tema="porcelana"] .sk-slide,html[data-tema="civico"] .sk-slide{--sobre-campo:#F5F8FB!important;--sobre-campo-2:rgba(245,248,251,.88)!important}
+/* ARDÓSIA · escuro cinza-azulado com ocre, telhas de pedra sobrepostas */
+html[data-tema="ardosia"]{
+  --fundo:#22282E;--papel:#2B3239;--tinta:#ECE7DC;--tinta2:#BDB8AC;--acento:#D9A84E;--acento2:#93B2C9;--sobre-acento:#22282E;
+  --marca:rgba(217,168,78,.30);--marca-campo:rgba(217,168,78,.30);--linha:#414A53;--linha-forte:#D9A84E;--trilha-cor:#ECE7DC;
+  --painel:#1D2227;--scrim:rgba(14,17,20,.88);
+  --campos:#1A1F24,#33291E,#1C2A35,#2A2F24,#30262A,#1F252B;
+  --f-titulo:'Schibsted Grotesk',sans-serif;--f-corpo:'Schibsted Grotesk',sans-serif;--f-num:'Schibsted Grotesk',sans-serif;--f-citacao:'Schibsted Grotesk',sans-serif;--peso-citacao:500;
+  --peso-titulo:700;--esp-titulo:-0.025em;--alt-titulo:1.04;--marcador-raio:2px;--raio:6px;--raio-img:3px;
+  --textura:repeating-linear-gradient(0deg,rgba(236,231,220,.012) 0 1px,transparent 1px 7px);
+}
+html[data-tema="noturno"] .sk-slide::after,html[data-tema="lousa"] .sk-slide::after,html[data-tema="velino"] .sk-slide::after,html[data-tema="ardosia"] .sk-slide::after{mix-blend-mode:normal}
+html[data-tema="datilografo"] .sk-itens li::before{background:transparent;border:4px solid var(--acento);border-radius:0}
+html[data-tema="datilografo"] .sk-campo .sk-itens li::before{border-color:var(--sobre-campo)}
+html[data-tema="editorial"] .sk-itens li::before,html[data-tema="revista"] .sk-itens li::before{width:calc(var(--c) * .5px);height:6px;top:calc(var(--c) * .58px)}
+html[data-tema="prancheta"] .sk-itens li::before{background:transparent;border:4px solid var(--acento);border-radius:50%}
+html[data-tema="prancheta"] .sk-campo .sk-itens li::before{border-color:var(--sobre-campo)}
+html[data-tema="gravura"] .sk-titulo{font-feature-settings:"liga","dlig"}
+/* o corpo largo do Archivo deixa um vão entre texto e diagrama; o diagrama encosta 32 px na coluna */
+html[data-tema="duna"] .sk-l-diagrama .sk-area-diag svg{left:0;width:calc(100% - 64px)}

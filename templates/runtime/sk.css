@@ -1,0 +1,363 @@
+/* slides-impecaveis · motor visual
+   Palco fixo de 1920x1080 escalado para a janela. Nada aqui depende de rede.
+   Tamanhos de fonte vêm de --t (título) e --c (corpo), ajustados por sk.js
+   sem nunca descer abaixo dos pisos (título 64 px, corpo 44 px, qualquer texto 28 px). */
+
+/* ------------------------------------------------------------ base */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:#0c0c0c}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-kerning:normal}
+::selection{background:var(--marca);color:var(--tinta)}
+img{display:block}
+#sk-palco{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.sk-slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;
+  background:var(--fundo);color:var(--tinta);font-family:var(--f-corpo);font-weight:400;
+  visibility:hidden;z-index:0;
+  --c:48;--t:96;font-variant-numeric:lining-nums proportional-nums}
+.sk-slide.sk-ativo{visibility:visible;z-index:2}
+.sk-slide::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--textura);opacity:var(--textura-op,1);mix-blend-mode:multiply;z-index:0}
+.sk-slide > *{position:relative;z-index:1}
+:root{--ease:cubic-bezier(.16,1,.3,1);--ease2:cubic-bezier(.65,0,.35,1);--mx:112px;--my:88px;--g:56px}
+
+/* ------------------------------------------------------------ tipografia por papel */
+.sk-titulo{font-family:var(--f-titulo);font-weight:var(--peso-titulo);font-size:calc(var(--t) * 1px);line-height:var(--alt-titulo,1.06);
+  letter-spacing:var(--esp-titulo,-0.015em);text-transform:var(--caixa-titulo,none);margin:0;color:var(--cor-titulo,inherit);
+  text-wrap:pretty;font-variation-settings:var(--fvs-titulo,normal);hyphens:manual}
+.sk-sub{font-size:calc(var(--c) * 1.06px);line-height:1.22;margin:0;color:var(--tinta2-local,var(--tinta2));text-wrap:pretty}
+.sk-itens{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:calc(var(--c) * .52px)}
+.sk-itens li{font-size:calc(var(--c) * 1px);line-height:1.24;position:relative;padding-left:calc(var(--c) * .82px);text-wrap:pretty}
+.sk-itens li::before{content:"";position:absolute;left:0;top:calc(var(--c) * .42px);width:calc(var(--c) * .34px);height:calc(var(--c) * .34px);
+  background:var(--marcador,var(--acento));border-radius:var(--marcador-raio,3px);transform:var(--marcador-giro,none)}
+.sk-texto{font-size:calc(var(--c) * 1px);line-height:1.26;margin:0;text-wrap:pretty}
+.sk-legenda{font-family:var(--f-legenda,var(--f-corpo));font-size:30px;line-height:1.25;color:var(--tinta2);margin:0;letter-spacing:0}
+.sk-fonte{font-size:30px;line-height:1.25;color:var(--tinta2);margin:0}
+.sk-rotulo{font-family:var(--f-titulo);font-size:34px;line-height:1.1}
+mark{background:linear-gradient(transparent 58%,var(--marca) 58%,var(--marca) 92%,transparent 92%);color:inherit;padding:0 .06em;border-radius:2px}
+.sk-campo mark,.sk-escuro mark{background:linear-gradient(transparent 58%,var(--marca-campo,rgba(255,255,255,.28)) 58%,var(--marca-campo,rgba(255,255,255,.28)) 92%,transparent 92%)}
+strong,b{font-weight:700}
+em,i{font-style:italic}
+.sk-cit{white-space:nowrap;font-size:.62em;font-family:var(--f-titulo);letter-spacing:.01em;opacity:.92;border:2px solid currentColor;border-radius:99px;padding:.04em .5em .08em;margin-left:.3em;vertical-align:.12em}
+
+/* superfícies */
+.sk-campo{background:var(--campo);color:var(--sobre-campo);--tinta2-local:var(--sobre-campo-2);--cor-titulo:var(--sobre-campo)}
+.sk-campo .sk-legenda,.sk-campo .sk-fonte{color:var(--sobre-campo-2)}
+.sk-campo .sk-itens li::before{background:var(--marcador-campo,var(--sobre-campo))}
+.sk-papel{background:var(--papel)}
+.sk-caixa{overflow:hidden;min-width:0;min-height:0}
+
+/* imagens */
+.sk-fig{position:relative;overflow:hidden;margin:0;background:var(--papel);min-height:0}
+.sk-fig img{width:100%;height:100%;object-fit:cover;object-position:var(--foco,50% 50%)}
+.sk-fig.sk-conter img{object-fit:contain;background:var(--papel)}
+.sk-fig.sk-fig-livre{width:100%;height:100%}
+.sk-fig figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 32px 20px;background:var(--scrim,rgba(12,12,12,.74));color:#F4EFE6;
+  font-size:28px;line-height:1.25;font-family:var(--f-corpo)}
+.sk-fig figcaption i{font-style:italic}
+.sk-fig figcaption{text-wrap:balance}
+.sk-moldura{box-shadow:0 22px 48px -18px rgba(0,0,0,.42),0 2px 6px rgba(0,0,0,.18);border-radius:var(--raio-img,4px)}
+
+/* trilha de progresso, sem texto e sem número */
+.sk-trilha{position:absolute;left:0;right:0;bottom:0;height:12px;display:flex;z-index:5;pointer-events:none}
+.sk-trilha span{flex:1;background:var(--trilha-cor);opacity:.28}
+.sk-trilha span.sk-feito{opacity:.95}
+.sk-trilha span.sk-aqui{opacity:1;background:var(--acento)}
+
+/* ------------------------------------------------------------ layouts */
+.sk-l{position:absolute;inset:0}
+
+/* capa */
+.sk-l-capa{display:grid;grid-template-columns:50% 50%}
+.sk-l-capa .sk-lado-texto{padding:150px 64px 110px var(--mx);display:flex;flex-direction:column;justify-content:space-between;gap:56px}
+.sk-l-capa .sk-meta{font-size:40px;line-height:1.3}
+.sk-l-capa .sk-titulo{margin:0}
+.sk-l-capa .sk-fig{height:1080px}
+
+/* abertura de seção */
+.sk-l-secao{display:grid;grid-template-columns:1fr 44%;grid-template-rows:1fr auto}
+.sk-l-secao .sk-lado-texto{padding:var(--my) 40px 40px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:76px}
+.sk-l-secao .sk-fig,.sk-l-secao .sk-arte-box{grid-row:1 / span 2;grid-column:2;height:1080px}
+.sk-l-secao .sk-mapa{grid-column:1;display:flex;flex-wrap:wrap;gap:14px 34px;padding:0 64px 92px var(--mx);font-family:var(--f-titulo);font-size:40px;line-height:1.2}
+.sk-l-secao .sk-mapa span{color:var(--sobre-campo-2,inherit);padding-top:14px;border-top:5px solid currentColor}
+.sk-l-secao .sk-mapa span.sk-aqui{opacity:1;border-top-color:var(--marca-secao,var(--marca));font-weight:700}
+
+/* imagem total com painel sólido */
+.sk-l-imagem-total .sk-fig{position:absolute;inset:0}
+.sk-l-imagem-total .sk-painel{position:absolute;top:0;bottom:0;width:840px;padding:var(--my) 72px 96px 84px;display:flex;flex-direction:column;justify-content:center;gap:40px;background:var(--painel,var(--papel))}
+.sk-l-imagem-total[data-lado="esquerda"] .sk-painel{left:0}
+.sk-l-imagem-total[data-lado="direita"] .sk-painel{right:0}
+.sk-l-imagem-total[data-lado="esquerda"] .sk-fig figcaption{left:840px}
+.sk-l-imagem-total[data-lado="direita"] .sk-fig figcaption{right:840px}
+
+/* dividido */
+.sk-l-dividido{display:grid;grid-template-columns:var(--col-texto,54%) 1fr}
+.sk-l-dividido[data-lado="esquerda"]{grid-template-columns:1fr var(--col-texto,54%)}
+.sk-l-dividido[data-lado="esquerda"] .sk-lado-texto{order:2}
+.sk-l-dividido .sk-lado-texto{padding:var(--my) 72px 100px var(--mx);display:flex;flex-direction:column;gap:48px;justify-content:center}
+.sk-l-dividido[data-lado="esquerda"] .sk-lado-texto{padding:var(--my) var(--mx) 100px 80px}
+.sk-l-dividido .sk-visual{height:1080px;position:relative;min-width:0}
+.sk-l-dividido .sk-visual > *{position:absolute;inset:0}
+
+/* faixa */
+.sk-l-faixa{display:grid;grid-template-rows:var(--alt-faixa,430px) 1fr}
+.sk-l-faixa .sk-fig{height:var(--alt-faixa,430px)}
+.sk-l-faixa .sk-baixo{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:72px;padding:56px var(--mx) 92px;align-items:center}
+.sk-l-faixa .sk-baixo.sk-sem-titulo{grid-template-columns:1fr}
+
+/* número em destaque */
+.sk-l-numero{display:grid;grid-template-columns:52% 1fr}
+.sk-l-numero .sk-lado-texto{padding:var(--my) 72px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:30px}
+.sk-num{font-variation-settings:var(--fvs-titulo,normal);font-family:var(--f-num,var(--f-titulo));font-weight:700;font-size:calc(var(--n,300) * 1px);line-height:.86;letter-spacing:-.035em;margin:0;color:var(--cor-num,var(--acento));font-variant-numeric:lining-nums tabular-nums}
+.sk-num small{font-size:.32em;letter-spacing:0;margin-left:.12em;font-weight:600}
+.sk-l-numero .sk-visual{height:1080px;position:relative}
+.sk-l-numero .sk-visual > *{position:absolute;inset:0}
+
+/* citação */
+.sk-l-citacao{display:grid;grid-template-columns:1fr 38%}
+.sk-l-citacao .sk-lado-texto{padding:var(--my) 84px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:44px;position:relative}
+.sk-aspas{position:static;flex:none;width:150px;height:128px;margin-bottom:-12px;color:var(--aspas,var(--acento));opacity:.95}
+.sk-campo .sk-aspas{color:var(--aspas-campo,var(--marca))}
+.sk-l-citacao blockquote{margin:0;font-family:var(--f-citacao,var(--f-titulo));font-style:var(--estilo-citacao,normal);font-size:calc(var(--c) * 1px);line-height:1.2;font-weight:var(--peso-citacao,400);text-wrap:pretty;letter-spacing:-.005em;font-variation-settings:var(--fvs-citacao,normal)}
+.sk-l-citacao .sk-autor{font-size:40px;line-height:1.25;font-weight:600}
+.sk-l-citacao .sk-fig{height:1080px}
+
+/* comparação */
+.sk-l-comparacao{display:grid;grid-template-rows:auto 1fr;padding:var(--my) var(--mx) 96px;gap:44px}
+.sk-l-comparacao .sk-cols{display:grid;grid-template-columns:1fr 1fr;gap:96px;min-height:0;position:relative}
+.sk-l-comparacao .sk-col{display:grid;grid-template-rows:var(--alt-img-comp,410px) auto 1fr;gap:28px;min-height:0}
+.sk-l-comparacao .sk-col.sk-sem-img{grid-template-rows:auto 1fr}
+.sk-l-comparacao .sk-col h3{font-family:var(--f-titulo);font-weight:var(--peso-titulo);font-size:calc(var(--c) * 1.1px);margin:0;line-height:1.05;text-transform:var(--caixa-titulo,none);color:var(--acento)}
+.sk-l-comparacao .sk-versus{position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:var(--linha)}
+.sk-l-comparacao .sk-versus::after{content:"";position:absolute;left:50%;top:calc(var(--alt-img-comp,410px) + 10px);width:56px;height:56px;margin-left:-28px;border-radius:50%;background:var(--acento);box-shadow:0 0 0 12px var(--fundo)}
+
+/* linha do tempo */
+.sk-l-linha-do-tempo{display:grid;grid-template-rows:auto auto 1fr;padding:var(--my) var(--mx) 92px;gap:36px}
+.sk-l-linha-do-tempo .sk-faixa-img{height:360px;margin:calc(var(--my) * -1) calc(var(--mx) * -1) 0;position:relative}
+.sk-l-linha-do-tempo .sk-faixa-img > *{position:absolute;inset:0}
+.sk-eventos{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:40px;position:relative;padding-top:64px;min-height:0}
+.sk-eventos::before{content:"";position:absolute;left:0;right:0;top:20px;height:6px;background:var(--linha-forte,var(--tinta));border-radius:3px;transform-origin:left}
+.sk-evento{position:relative;display:flex;flex-direction:column;gap:14px;min-width:0}
+.sk-evento::before{content:"";position:absolute;left:0;top:-58px;width:30px;height:30px;border-radius:50%;background:var(--fundo);border:7px solid var(--acento)}
+.sk-evento .sk-ano{font-variation-settings:var(--fvs-titulo,normal);font-family:var(--f-num,var(--f-titulo));font-weight:700;font-size:96px;line-height:1;color:var(--acento);letter-spacing:-.02em}
+.sk-evento .sk-texto{font-size:calc(var(--c) * 1px)}
+
+/* processo */
+.sk-l-processo{display:grid;grid-template-rows:auto auto 1fr;padding:var(--my) var(--mx) 92px;gap:40px}
+.sk-l-processo .sk-faixa-img{height:220px;margin:calc(var(--my) * -1) calc(var(--mx) * -1) 0;position:relative}
+.sk-l-processo .sk-faixa-img > *{position:absolute;inset:0}
+.sk-passos{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:56px;min-height:0}
+.sk-passo{display:flex;flex-direction:column;gap:24px;min-width:0;position:relative}
+.sk-passo .sk-marca{width:104px;height:104px;border-radius:50%;background:var(--acento);color:var(--sobre-acento,#fff);display:grid;place-items:center;font-family:var(--f-num,var(--f-titulo));font-weight:700;font-size:56px;flex:none}
+.sk-passo h3{font-family:var(--f-titulo);font-weight:var(--peso-titulo);font-size:calc(var(--c) * 1.12px);line-height:1.08;margin:0;text-transform:var(--caixa-titulo,none)}
+.sk-passo:not(:last-child)::after{content:"";position:absolute;top:50px;left:128px;right:-32px;height:5px;background:var(--linha-forte,var(--tinta));opacity:.35}
+
+/* galeria */
+.sk-l-galeria{display:grid;grid-template-rows:auto 1fr;padding:var(--my) var(--mx) 92px;gap:40px}
+.sk-l-galeria .sk-grade{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:28px;min-height:0}
+.sk-l-galeria .sk-fig{height:100%}
+
+/* cartões */
+.sk-l-cartoes{display:grid;grid-template-rows:auto 1fr;padding:var(--my) var(--mx) 92px;gap:44px}
+.sk-cartoes{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:36px;min-height:0}
+.sk-cartao{background:var(--papel);border-radius:var(--raio,14px);overflow:hidden;display:grid;grid-template-rows:38% auto 1fr;box-shadow:0 18px 40px -22px rgba(0,0,0,.35);min-height:0}
+.sk-cartao.sk-sem-img{grid-template-rows:auto 1fr}
+.sk-cartao h3{font-family:var(--f-titulo);font-weight:var(--peso-titulo);font-size:calc(var(--c) * 1.08px);line-height:1.06;margin:30px 34px 0;text-transform:var(--caixa-titulo,none)}
+.sk-cartao .sk-texto{margin:18px 34px 34px}
+
+/* gráfico */
+.sk-l-grafico{display:grid;grid-template-columns:40% 1fr}
+.sk-l-grafico .sk-lado-texto{padding:var(--my) 56px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:40px}
+.sk-l-grafico .sk-area{background:var(--campo);padding:64px 72px 64px 48px;display:flex;flex-direction:column;gap:20px;height:1080px}
+.sk-l-grafico .sk-cartao-graf{flex:1;background:var(--papel);border-radius:var(--raio,16px);padding:34px 40px 26px;position:relative;min-height:0;color:var(--tinta)}
+.sk-l-grafico .sk-cartao-graf svg{position:absolute;inset:34px 40px 26px;width:calc(100% - 80px);height:calc(100% - 60px)}
+.sk-l-grafico .sk-area .sk-fonte{color:var(--sobre-campo-2)}
+
+/* tabela */
+.sk-l-tabela{display:grid;grid-template-rows:auto 1fr;padding:var(--my) var(--mx) 92px;gap:44px}
+.sk-l-tabela .sk-zona{display:flex;flex-direction:column;gap:20px}
+.sk-tab{width:100%;flex:1;border-collapse:separate;border-spacing:0;font-size:calc(var(--c) * .92px);line-height:1.18;table-layout:fixed}
+.sk-tab th{font-family:var(--f-titulo);font-weight:var(--peso-titulo);text-align:left;padding:22px 26px;background:var(--acento);color:var(--sobre-acento);border-left:4px solid var(--fundo);text-transform:var(--caixa-titulo,none);font-size:calc(var(--c) * .9px)}
+.sk-tab th:first-child{border-radius:var(--raio,10px) 0 0 0;border-left:0}
+.sk-tab th:first-child:empty{background:transparent}.sk-tab th:last-child{border-radius:0 var(--raio,10px) 0 0}
+.sk-tab td{padding:22px 26px;border-bottom:3px solid var(--linha);vertical-align:top;background:var(--papel)}
+.sk-tab td:first-child{font-weight:700;font-family:var(--f-titulo)}
+
+/* pergunta e afirmação */
+.sk-l-pergunta{display:grid;grid-template-columns:1fr 46%}
+.sk-l-pergunta .sk-lado-texto{padding:var(--my) 84px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:48px}
+.sk-l-pergunta .sk-visual{height:1080px;position:relative}
+.sk-l-pergunta .sk-visual > *{position:absolute;inset:0}
+.sk-l-afirmacao .sk-fig{position:absolute;inset:0}
+.sk-l-afirmacao .sk-bloco{position:absolute;left:var(--mx);right:var(--mx);bottom:110px;top:var(--my);display:flex;flex-direction:column;justify-content:flex-end;gap:36px}
+.sk-l-afirmacao.sk-com-img .sk-bloco{left:0;right:auto;width:1240px;top:auto;bottom:0;padding:84px 96px 104px var(--mx);background:var(--painel-escuro,rgba(14,14,14,.86));color:#F5F0E6;--tinta2-local:#E2D9C8}
+.sk-l-afirmacao.sk-com-img .sk-fig figcaption{left:1240px}
+.sk-l-afirmacao:not(.sk-com-img) .sk-arte-box{position:absolute;inset:0;opacity:.32}
+
+/* lista */
+.sk-l-lista{display:grid;grid-template-columns:1fr var(--col-tira,30%)}
+.sk-l-lista[data-lado="esquerda"]{grid-template-columns:var(--col-tira,30%) 1fr}
+.sk-l-lista[data-lado="esquerda"] .sk-lado-texto{order:2}
+.sk-l-lista .sk-lado-texto{padding:var(--my) 80px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:52px}
+.sk-l-lista .sk-visual{height:1080px;position:relative}
+.sk-l-lista .sk-visual > *{position:absolute;inset:0}
+
+/* diagrama */
+.sk-l-diagrama{display:grid;grid-template-columns:40% 1fr}
+.sk-l-diagrama .sk-lado-texto{padding:var(--my) 48px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:44px}
+.sk-l-diagrama .sk-area-diag{position:relative;height:1080px;background:var(--fundo-diag,transparent)}
+.sk-l-diagrama .sk-area-diag svg{position:absolute;inset:48px 64px 72px 32px;width:calc(100% - 96px);height:calc(100% - 120px)}
+
+/* fechamento */
+.sk-l-fechamento{display:grid;grid-template-columns:1fr var(--col-vis,36%)}
+.sk-l-fechamento .sk-lado-texto{padding:var(--my) 80px 100px var(--mx);display:flex;flex-direction:column;justify-content:center;gap:56px}
+.sk-ideias{display:flex;flex-direction:column;gap:40px;margin:0;padding:0;list-style:none}
+.sk-ideias li{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start;font-size:calc(var(--c) * 1px);line-height:1.22}
+.sk-ideias li::before{content:"";width:28px;height:28px;margin-top:calc(var(--c) * .3px);background:var(--acento);border-radius:var(--marcador-raio,4px);transform:var(--marcador-giro,none)}
+.sk-l-fechamento .sk-visual{height:1080px;position:relative}
+.sk-l-fechamento .sk-visual > *{position:absolute;inset:0}
+
+/* referências */
+.sk-l-referencias{display:grid;grid-template-columns:1fr var(--col-vis,24%)}
+.sk-l-referencias .sk-lado-texto{padding:var(--my) 72px 100px var(--mx);display:flex;flex-direction:column;gap:44px;justify-content:center}
+.sk-refs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:26px;font-size:calc(var(--c) * .82px);line-height:1.28}
+.sk-refs li{padding-left:44px;text-indent:-44px}
+.sk-l-referencias .sk-visual{height:1080px;position:relative}
+.sk-l-referencias .sk-visual > *{position:absolute;inset:0}
+
+/* livre: o agente escreve o HTML, os pisos e as medições continuam valendo */
+.sk-l-livre{padding:var(--my) var(--mx) 92px}
+.sk-l-livre.sk-com-fonte{padding-bottom:132px}
+.sk-fonte-livre{position:absolute;left:var(--mx);right:var(--mx);bottom:46px}
+
+/* moldura de imagem que preenche a célula da grade */
+.sk-im{position:relative;min-height:0;min-width:0;height:100%}
+.sk-im > .sk-fig,.sk-im > .sk-arte-box{position:absolute;inset:0;height:auto}
+
+/* arte de preenchimento (quando falta imagem) */
+.sk-arte-box{position:relative;overflow:hidden}
+.sk-arte-box svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* ------------------------------------------------------------ movimento
+   O estado final é o padrão. As animações só existem com html.sk-mov,
+   no slide ativo, e terminam em até ~2,4 s. Sem quique. */
+@keyframes sk-sobe{from{opacity:0;transform:translateY(var(--dist,42px))}to{opacity:1;transform:none}}
+@keyframes sk-aparece{from{opacity:0}to{opacity:1}}
+@keyframes sk-revela{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes sk-revela-baixo{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes sk-cortina{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes sk-zoom{from{transform:scale(var(--zoom,1.12))}to{transform:scale(1)}}
+@keyframes sk-foco{from{opacity:0;filter:blur(var(--borra,14px));transform:scale(1.03)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes sk-cresce-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes sk-cresce-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes sk-traco{from{stroke-dashoffset:var(--comp,1)}to{stroke-dashoffset:0}}
+@keyframes sk-entra-esq{from{opacity:0;transform:translateX(calc(-1 * var(--dist,42px)))}to{opacity:1;transform:none}}
+@keyframes sk-entra-dir{from{opacity:0;transform:translateX(var(--dist,42px))}to{opacity:1;transform:none}}
+@keyframes sk-iris{from{clip-path:circle(0% at var(--ox,50%) var(--oy,50%))}to{clip-path:circle(150% at var(--ox,50%) var(--oy,50%))}}
+@keyframes sk-datilografa{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes sk-pousa{0%{opacity:0;transform:translateY(calc(-1.6 * var(--dist,42px)))}70%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes sk-deriva{from{transform:translate(0,0)}to{transform:translate(var(--dx,8px),var(--dy,-10px))}}
+@keyframes sk-pulso{0%,100%{opacity:.55}50%{opacity:1}}
+/* intensidade: um botão só para o deck (ou para um slide). Muda distância, duração, atraso e zoom, nunca o estado final */
+:root,[data-intensidade="padrao"]{--dist:42px;--zoom:1.12;--borra:14px;--kdur:1;--kd:1}
+[data-intensidade="sobrio"]{--dist:16px;--zoom:1.03;--borra:6px;--kdur:.7;--kd:.55}
+[data-intensidade="vivo"]{--dist:72px;--zoom:1.2;--borra:20px;--kdur:1.15;--kd:1.3}
+html.sk-mov .sk-ativo [data-a]{animation-duration:calc(var(--dur,.9s) * var(--kdur,1));animation-timing-function:var(--ease);animation-fill-mode:both;animation-delay:calc(var(--d,0ms) * var(--kd,1))}
+html.sk-mov .sk-ativo [data-a="sobe"]{animation-name:sk-sobe}
+html.sk-mov .sk-ativo [data-a="aparece"]{animation-name:sk-aparece}
+html.sk-mov .sk-ativo [data-a="revela"]{animation-name:sk-revela;--dur:1.1s;animation-timing-function:var(--ease2)}
+html.sk-mov .sk-ativo [data-a="revela-baixo"]{animation-name:sk-revela-baixo;--dur:1.1s;animation-timing-function:var(--ease2)}
+html.sk-mov .sk-ativo [data-a="cortina"]{animation-name:sk-cortina;--dur:1s;animation-timing-function:var(--ease2)}
+html.sk-mov .sk-ativo [data-a="foco"]{animation-name:sk-foco;--dur:1.2s}
+html.sk-mov .sk-ativo [data-a="cresce-y"]{animation-name:sk-cresce-y;transform-origin:bottom;transform-box:fill-box}
+html.sk-mov .sk-ativo [data-a="cresce-x"]{animation-name:sk-cresce-x;transform-origin:left;transform-box:fill-box}
+html.sk-mov .sk-ativo [data-a="traco"]{animation-name:sk-traco;--dur:1.6s;stroke-dasharray:var(--comp,1)}
+html.sk-mov .sk-ativo [data-a="entra-esq"]{animation-name:sk-entra-esq}
+html.sk-mov .sk-ativo [data-a="entra-dir"]{animation-name:sk-entra-dir}
+html.sk-mov .sk-ativo [data-a="iris"]{animation-name:sk-iris;--dur:1.2s;animation-timing-function:var(--ease2)}
+html.sk-mov .sk-ativo [data-a="datilografa"]{animation-name:sk-datilografa;animation-timing-function:steps(var(--passos,24),end);width:fit-content}
+html.sk-mov .sk-ativo [data-a="pousa"]{animation-name:sk-pousa;--dur:.8s}
+html.sk-mov .sk-ativo .sk-fig[data-a] img,html.sk-mov .sk-ativo .sk-kb img{animation:sk-zoom calc(2.4s * var(--kdur,1)) var(--ease) both;animation-delay:calc(var(--d,0ms) * var(--kd,1))}
+html.sk-mov .sk-ativo .sk-particula{animation:sk-deriva var(--t-der,7s) ease-in-out infinite alternate,sk-pulso var(--t-pul,4s) ease-in-out infinite}
+html.sk-mov .sk-ativo .sk-eventos::before{animation:sk-cresce-x 1.4s var(--ease2) both .2s}
+html.sk-mov .sk-ativo .sk-trilha span.sk-aqui{animation:sk-aparece .6s both}
+html.sk-mov .sk-ativo .sk-morfando,html.sk-mov .sk-ativo .sk-morfando img{animation:none!important}
+
+/* troca de slide (references/08-movimento.md). O que sai fica parado e opaco, o que entra aparece por cima.
+   Família adaptada de open-slide (MIT): mesma duração e curva, varia só o pequeno deslocamento. */
+@keyframes sk-tr-dissolve{from{opacity:0}to{opacity:1}}
+@keyframes sk-tr-sobe{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes sk-tr-assenta{from{opacity:0;transform:translateY(12px);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+@keyframes sk-tr-floresce{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes sk-tr-some{from{opacity:1}to{opacity:0}}
+html.sk-mov .sk-slide.sk-sai{visibility:visible;z-index:1}
+html.sk-mov .sk-slide.sk-entra{animation:sk-tr-dissolve .32s cubic-bezier(0,0,.2,1) both}
+html.sk-mov #sk-palco[data-tr="sobe"] .sk-entra{animation-name:sk-tr-sobe}
+html.sk-mov #sk-palco[data-tr="assenta"] .sk-entra{animation-name:sk-tr-assenta}
+html.sk-mov #sk-palco[data-tr="floresce"] .sk-entra{animation-name:sk-tr-floresce}
+/* respiro: a única que passa pelo fundo, de propósito, antes de uma seção */
+html.sk-mov body:not(.sk-grade) #sk-palco[data-tr="respiro"]{background:var(--fundo)}
+html.sk-mov #sk-palco[data-tr="respiro"] .sk-sai{animation:sk-tr-some .18s cubic-bezier(.4,0,1,1) both}
+html.sk-mov #sk-palco[data-tr="respiro"] .sk-entra{animation:sk-tr-sobe .26s cubic-bezier(0,0,.2,1) .3s both}
+html.sk-mov #sk-palco[data-tr="respiro"] .sk-entra [data-a]{animation-delay:calc(var(--d,0ms) * var(--kd,1) + 300ms)}
+::view-transition-group(*){animation-duration:.7s;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.32s}
+::view-transition-old(*),::view-transition-new(*){height:100%;object-fit:cover}
+
+/* movimento reduzido no sistema: fica só a opacidade */
+@media (prefers-reduced-motion:reduce){
+  html.sk-mov .sk-ativo [data-a]{animation-name:sk-aparece!important;--dur:.5s}
+  html.sk-mov .sk-ativo .sk-fig img,html.sk-mov .sk-ativo .sk-particula,html.sk-mov .sk-ativo .sk-eventos::before{animation:none!important}
+  html.sk-mov #sk-palco .sk-entra{animation-name:sk-tr-dissolve!important}
+  .sk-slide[data-etapas] [data-etapa].sk-oculta{transform:none!important}
+}
+
+/* etapas: revelação progressiva por tecla */
+.sk-slide[data-etapas] [data-etapa].sk-oculta{opacity:0!important;transform:translateY(16px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.sk-slide[data-etapas] svg [data-etapa].sk-oculta{transform:none}
+.sk-slide[data-etapas] [data-etapa]{transition:opacity .45s var(--ease),transform .45s var(--ease)}
+
+/* ------------------------------------------------------------ interface (não faz parte do slide) */
+.sk-ui{position:fixed;z-index:50;font-family:system-ui,sans-serif}
+#sk-ajuda{left:50%;bottom:28px;transform:translateX(-50%);background:rgba(10,10,10,.86);color:#eee;padding:16px 26px;border-radius:12px;font-size:20px;display:none}
+#sk-ajuda.sk-ver{display:block}
+#sk-creditos,#sk-notas{inset:0;background:rgba(8,8,8,.92);color:#f2efe8;display:none;overflow:auto;padding:70px 9vw}
+#sk-creditos.sk-ver,#sk-notas.sk-ver{display:block}
+#sk-creditos h2,#sk-notas h2{font-size:42px;margin:0 0 30px;font-weight:600}
+#sk-creditos li{font-size:28px;line-height:1.35;margin-bottom:18px}
+#sk-notas p{font-size:34px;line-height:1.4;max-width:60ch}
+body.sk-grade{overflow:auto;background:#151515}
+body.sk-grade #sk-palco{position:relative;transform:none!important;width:auto;height:auto;display:grid;grid-template-columns:repeat(auto-fill,384px);gap:22px;padding:30px;justify-content:center}
+body.sk-grade .sk-slide{position:relative;opacity:1;visibility:visible;transform:scale(.2);transform-origin:0 0;margin:0 -1536px -864px 0;cursor:pointer;outline:6px solid transparent}
+body.sk-grade .sk-slide.sk-ativo{outline-color:#E8B46A}
+html.sk-sem-cursor,html.sk-sem-cursor *,html.sk-laser,html.sk-laser *{cursor:none!important}
+#sk-tela{inset:0;z-index:80;display:none;background:#000}
+#sk-tela.sk-ver{display:block}
+#sk-tela[data-cor="branca"]{background:#fff}
+#sk-laser{left:-12px;top:-12px;width:24px;height:24px;border-radius:50%;background:var(--acento);opacity:.92;pointer-events:none;z-index:90;display:none}
+html.sk-laser #sk-laser{display:block}
+/* janela do apresentador (?apresentador) */
+html.sk-ap,html.sk-ap body{overflow:auto;background:#141414;color:#eee;font:28px/1.4 system-ui,sans-serif}
+#ap{display:grid;grid-template-columns:1fr 520px;grid-template-rows:auto 1fr;gap:20px 40px;padding:28px 36px;min-height:100vh}
+#ap-tempo{grid-column:1 / span 2;margin:0;font-size:40px;font-variant-numeric:tabular-nums}
+#ap-h{font-size:40px;margin:0 0 .2em}
+#ap-tags{color:#E8B46A;margin:0 0 .6em;min-height:1.2em}
+#ap-n{font-size:30px;max-width:60ch}
+#ap-prox p{margin:0 0 10px;font-size:24px;opacity:.75}
+#ap-f{width:520px;height:293px;border:0;background:#000;pointer-events:none}
+
+/* modo de fundo para PPTX: o texto some, o resto fica, e o exportador recoloca o texto como caixa editável */
+html.sk-pptx-fundo [data-txt]:not(text),html.sk-pptx-fundo [data-txt]:not(text) *{color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important;text-decoration-color:transparent!important}
+html.sk-rascunho .sk-slide::before{content:"RASCUNHO · NÃO APROVADO";position:absolute;right:28px;top:22px;z-index:40;font:700 30px/1 system-ui,sans-serif;color:#fff;background:#b3261e;padding:10px 18px;border-radius:8px;letter-spacing:.04em}
+
+/* ------------------------------------------------------------ impressão: um slide por página, estado final */
+@page{size:1920px 1080px;margin:0}
+@media print{
+  html,body{overflow:visible;background:none}
+  #sk-palco{position:static;transform:none!important;width:1920px;height:auto}
+  .sk-slide{position:relative;opacity:1!important;visibility:visible!important;page-break-after:always;break-after:page;transition:none}
+  .sk-slide *{animation:none!important;transition:none!important}
+  .sk-ui{display:none!important}
+}
+
+/* modo final (captura, PDF, PPTX): sem transição nem animação */
+html.sk-final .sk-slide{transition:none!important}
+html.sk-final .sk-slide *,html.sk-final .sk-slide *::before,html.sk-final .sk-slide *::after{animation:none!important;transition:none!important}

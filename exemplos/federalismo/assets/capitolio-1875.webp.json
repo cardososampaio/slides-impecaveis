@@ -1,0 +1,25 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "United States Capitol",
+  "autor": "",
+  "data": "1875-01-01",
+  "url_pagina": "https://www.loc.gov/item/2005684916/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/pnp/cph/3b10000/3b10000/3b10500/3b10523u.tif",
+  "direitos": "No known restrictions on publication.",
+  "licenca": "sem restrições conhecidas",
+  "credito_sugerido": "United States Capitol. Library of Congress.",
+  "arquivo_local": "loc_2005684916.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.04,0.04,0.96,0.96",
+    "salvo como webp q84, 1129x1413px"
+  ],
+  "origem_local": "loc_2005684916.jpg",
+  "largura": 1129,
+  "altura": 1413,
+  "texto_na_imagem": {
+    "md5": "58cad0ec244b",
+    "metodo": "heuristica",
+    "indice_figura": 0.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "The federalist : a collection of essays, written in favour of the new Constitution, as agreed upon by the Federal Convention, September 17, 1787 : in two volumes",
+  "data": "1788",
+  "url_pagina": "https://www.loc.gov/item/09021562/",
+  "url_arquivo": "https://tile.loc.gov/image-services/iiif/public:rbc:2014jeff21562v1:0011/full/pct:100/0/default.jpg",
+  "pagina": 11,
+  "volume": 1,
+  "direitos": "(não informado)",
+  "licenca": "domínio público. Livro impresso em 1788 (The Federalist, J. and A. McLean), sem restrição registrada no item.",
+  "credito_sugerido": "The federalist : a collection of essays, written in favour of the new Constitution, as agreed upon by the Federal Convention, September 17, 1787 : in two volumes. Library of Congress.",
+  "arquivo_local": "loc_09021562_v1p11.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.04,0.07,0.96,0.97",
+    "redução para lado maior 2400px",
+    "salvo como webp q84, 1562x2400px"
+  ],
+  "origem_local": "loc_09021562_v1p11.jpg",
+  "largura": 1562,
+  "altura": 2400,
+  "licenca_original_do_script": "VERIFICAR (leia 'direitos'; obras anteriores a 1900 costumam ser de domínio público)",
+  "decisao_direitos": "Conferido na página do item e pela data de publicação, em 2026-10-21.",
+  "texto_na_imagem": {
+    "md5": "5201b4ca1e5c",
+    "metodo": "ocr",
+    "palavras": 16,
+    "indice_figura": 0.016
+  }
+}

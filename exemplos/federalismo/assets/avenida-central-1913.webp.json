@@ -1,0 +1,25 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "Central Ave., \"the $11,000,000 boulevard\", north to bay, Rio de Janeiro, S.A.",
+  "autor": "Underwood & Underwood, copyright claimant, Underwood & Underwood, publisher",
+  "data": "1913-01-01",
+  "url_pagina": "https://www.loc.gov/item/2013645835/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/pnp/ds/03600/03619u.tif",
+  "direitos": "No known restrictions on publication.",
+  "licenca": "sem restrições conhecidas",
+  "credito_sugerido": "Central Ave., \"the $11,000,000 boulevard\", north to bay, Rio de Janeiro, S.A.. Library of Congress.",
+  "arquivo_local": "loc_2013645835.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.0855,0.164,0.476,0.84",
+    "salvo como webp q84, 1250x1138px"
+  ],
+  "origem_local": "loc_2013645835.jpg",
+  "largura": 1250,
+  "altura": 1138,
+  "texto_na_imagem": {
+    "md5": "53b203202968",
+    "metodo": "heuristica",
+    "indice_figura": 0.0
+  }
+}

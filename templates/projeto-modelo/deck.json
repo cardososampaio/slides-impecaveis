@@ -1,0 +1,29 @@
+{
+  "titulo": "PREENCHER",
+  "slug": "",
+  "idioma": "pt-BR",
+  "tema": "auto",
+  "modo_texto": "autoral",
+  "autor": "",
+  "instituicao": "",
+  "data": "",
+  "contrato": {
+    "tese": "PREENCHER: a ideia que organiza o deck inteiro, em uma frase",
+    "mundo": "PREENCHER: o mundo físico do deck (materiais, objetos, tipo de imagem)",
+    "historia": "PREENCHER: o que a plateia entende do primeiro ao último slide",
+    "primeira_tela": "PREENCHER: o slide 1 descrito como uma fotografia",
+    "forma": "PREENCHER: como o deck deve parecer, em uma frase (com tema auto, o tema sai do contrato)",
+    "publico": "PREENCHER: quem assiste e quantas pessoas",
+    "sala": "PREENCHER: tipo de sala, luz, projetor e distância da última fila",
+    "duracao_min": 30,
+    "perfil": "aula",
+    "perfil_opcoes": "aula (padrão) | congresso | banca | palestra | gestores (servidores públicos). Apague esta linha depois de escolher"
+  },
+  "secoes": [
+    {"nome": "PREENCHER", "inicio": 1}
+  ],
+  "imagens": {},
+  "slides": [
+    {"layout": "capa", "titulo": "PREENCHER", "subtitulo": "", "imagem": "", "notas": ""}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fonte": "NASA Image and Video Library",
+  "titulo": "Brasilia, Brazil",
+  "autor": "JPL",
+  "data": "2010-04-16",
+  "url_pagina": "https://images.nasa.gov/details/PIA13045",
+  "url_arquivo": "https://images-assets.nasa.gov/image/PIA13045/PIA13045~orig.jpg",
+  "licenca": "domínio público (imagens da NASA, salvo indicação em contrário)",
+  "direitos": "Ver https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "credito_sugerido": "Brasilia, Brazil. NASA.",
+  "arquivo_local": "nasa_PIA13045.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "salvo como webp q84, 2066x1788px"
+  ],
+  "origem_local": "nasa_PIA13045.jpg",
+  "largura": 2066,
+  "altura": 1788,
+  "texto_na_imagem": {
+    "md5": "9529c310a12f",
+    "metodo": "heuristica",
+    "indice_figura": 0.003
+  }
+}

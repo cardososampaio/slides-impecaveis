@@ -1,0 +1,27 @@
+{
+  "fonte": "Library of Congress",
+  "titulo": "James Madison / on stone by A. Newsam.",
+  "autor": "Duval, Peter S., 1804 or 1805-1886, Newsam, Albert, 1809-1864, artist",
+  "data": "1830-01-01",
+  "url_pagina": "https://www.loc.gov/item/2003655322/",
+  "url_arquivo": "https://tile.loc.gov/storage-services/master/pnp/pga/10200/10283u.tif",
+  "direitos": "No known restrictions on publication.",
+  "licenca": "sem restrições conhecidas",
+  "credito_sugerido": "James Madison / on stone by A. Newsam.. Library of Congress.",
+  "arquivo_local": "loc_2003655322.jpg",
+  "acesso_em": "2026-10-21",
+  "transformacoes": [
+    "recorte 0.06,0.035,0.94,0.83",
+    "proporção 2:3 foco 0.5,0.4",
+    "redução para lado maior 2200px",
+    "salvo como webp q84, 1466x2200px"
+  ],
+  "origem_local": "loc_2003655322.jpg",
+  "largura": 1466,
+  "altura": 2200,
+  "texto_na_imagem": {
+    "md5": "e9d948f91e63",
+    "metodo": "heuristica",
+    "indice_figura": 0.0
+  }
+}
